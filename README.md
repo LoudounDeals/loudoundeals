@@ -13,8 +13,8 @@ The daily job checks existing deals and performs a basic search for new leads. N
 Each daily run:
 
 1. Downloads the repository and runs `npm run update` to visit the restaurant source pages already attached to our deals.
-2. Checks whether the expected offer text is still present and the page matches a previously approved copy. When both checks pass, it refreshes the deal's “website checked” date.
-3. Flags changed pages, missing evidence, PDFs, and failed requests for review, preserving existing deal details rather than guessing new prices or terms.
+2. Revalidates each active, unexpired offer against reviewed offer-specific excerpts in `data/verification.json`, covering the item, price, schedule and published restrictions. Matching offers get today's Eastern “website checked” date, even when unrelated parts of the restaurant page change. The site's overall update timestamp advances when at least one offer passes.
+3. Flags missing or changed offer details, missing verification rules, PDFs, and failed requests for review, preserving the previous dates and deal details rather than guessing new prices or terms. Needs-review, expired and withdrawn listings are never automatically reactivated.
 4. Looks for potential new deals using the discovery methods below and saves findings in `reports/latest.json`.
 5. If the updater succeeds, runs tests, rebuilds the static site, and commits any data changes. A successful daily workflow triggers the GitHub Pages deployment.
 
@@ -30,7 +30,9 @@ Separately, on known restaurant pages, the updater looks for links whose URL pat
 
 **Discovery is currently basic.** It does not systematically search every Loudoun town, restaurant, weekday, or deal category. Search results are saved as leads; the updater does not automatically verify their location, extract prices and restrictions, or publish them.
 
-After manually reviewing full source terms, run `node scripts/update.mjs --approve-baselines` to approve current source fingerprints. This flag approves all successfully fetched HTML sources and is for an operator only. Subsequent identical pages with matching evidence refresh check dates. Changed pages remain review items; the updater never invents prices or silently changes terms. Listings older than 14 days display a recheck label. Explicit expired or withdrawn offers are excluded. Add reviewed new deals to JSON and run tests/build before publishing.
+Whole-page baselines and `--approve-baselines` are no longer used. Offer-specific checks were reviewed against accessible restaurant pages on October 1, 2026. Sources that could not be confirmed still require review; their dates do not advance just because the job ran. Text matching checks the reviewed excerpts, not the meaning of arbitrary new text elsewhere on a page; this is website evidence, not restaurant confirmation. A changed excerpt conservatively requires review even if the restaurant only rewrote the wording.
+
+To add or revise an offer, review the full source terms, then add exact source excerpts to its `data/verification.json` entry. Include the item and price together, its applicable days/hours, quantities and restrictions; a generic heading or price alone is insufficient. Set `reviewedAt` and `listingFingerprint` using the exported `listingFingerprint(deal)` function in `scripts/verify.mjs`. This fingerprint describes our listing, not the remote page: changes to our price, schedule, source or terms invalidate the old rules until reviewed again. Do not regenerate fingerprints in the daily workflow. Internal rules are not included in the public site. Listings older than 14 days display a recheck label. Explicit expired or withdrawn offers are excluded. Run tests/build before publishing reviewed changes.
 
 The Pages workflow deploys after a successful daily update, on pushes to `main`, or when manually dispatched. The explicit daily-workflow completion trigger is needed because commits made with `GITHUB_TOKEN` do not trigger another push workflow.
 
