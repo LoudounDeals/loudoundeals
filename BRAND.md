@@ -1,12 +1,12 @@
 # LoudounDeals · Scott Brand System v1.0
 
-The first application uses Hearth: warm Canvas, charcoal Ink, olive Ground, clay Field, vermilion Signal, and stone Quiet. `src/brand.css` maps these roles onto the existing layout. Table uses Field for its introductory panel; every role need not appear on every page.
+The default Local application uses Hearth: warm Canvas, charcoal Ink, olive Ground, clay Field, vermilion Signal, and stone Quiet. `src/brand.css` defines the foundation; `src/themes.css` applies the vision-board components. Local uses Field in its plate composition and Table uses Field behind its overhead meal; every role need not appear on every page.
 
-URL-selected variations are documented in [the template guide](TEMPLATES.md). `modern` and `modern-list` retain Hearth. `ocean` and `ocean-list` use the guide's Tidal palette: sandy Canvas, deep Ink, teal Ground, sea-glass Field, cobalt Signal, and mist Quiet. Card and list variants share the same content, typography, and interaction framework. The ocean character comes from these approved color relationships; Table uses Field for its introductory panel. Tidal's documented contrast pairs apply to the unchanged token values; complete browser accessibility review remains required.
+URL-selected variations are documented in [the template guide](TEMPLATES.md). Local, Ticket, and Table have complete header, hero, filter, card, footer, and favicon treatments; each has a matching Ocean clone using the guide's Tidal palette: sandy Canvas, deep Ink, teal Ground, sea-glass Field, cobalt Signal, and mist Quiet. Earlier `modern`, `modern-list`, `ocean`, and `ocean-list` layouts remain available. All versions share content, typography, and filter behavior. Complete accessibility review remains required.
 
 Modernist structure carries the layout. Systems appears in location labels and result counts. Studio is restrained because visitors need to scan deals quickly. Signal marks the introduction and source links; prices remain Ink.
 
-Progressive Depth: the introduction explains the directory, filters answer the immediate need, cards expose terms and sources, and “How we check deals” offers optional detail. Evergreen guidance replaces the hard-coded featured pizza offer so it cannot drift independently of listing data.
+Progressive Depth: the hero explains the directory and links to the filters, filters answer the immediate need, cards expose terms and sources, and “How we check deals” offers optional detail. The six vision-board themes omit the repeated introductory explainer. Food photography is decorative illustrative artwork, not a named restaurant's meal or an advertised deal; no deal data appears on it.
 
 Fonts are self-hosted: Plus Jakarta Sans 600/700, Inter 400/500/600, and JetBrains Mono 400/500. Download URLs and hashes are in `src/fonts/sources.json`; original OFL 1.1 notices accompany the files and are copied to `dist/fonts/`. There are no third-party font requests at runtime. The supplied Google Fonts endpoint returned TTF assets; they are used unchanged with swap/fallback behavior. A later optimization may acquire official WOFF2 equivalents.
 
@@ -18,6 +18,12 @@ Run `npm test` and `npm run build`. Before release, check real font rendering, k
 
 Local is the default, including absent, invalid, repeated, and `ui=default` selections. Ticket and Table are alternatives. Their Ocean clones change only the palette, preserving geometry, layout, typography, and behavior. Header symbols are inline SVG with live name text.
 
+Local combines a horizontal pin wordmark, original geometric plate hero, Ground call to action, and cards with a Ground top rule. Ticket combines its LD mark, burger photograph, Quiet filter band, two-column ticket cards with notched edges, and a restrained footer rule. Table combines its stacked wordmark, a meal framed by Field geometry, three-column Quiet cards, and a Field footer rule. All cards put prices first and retain restrictions and source links. Mobile layouts use one column; meaningful controls remain at least 44 px tall.
+
+The header links target existing sections: Deals, Find a meal, and How we check. The footer repeats the selected symbol. Favicons use separate compact 32-unit SVG drawings with thick features rather than shrinking the header marks; Local is also the static no-JavaScript favicon. Food JPEGs are self-hosted and their [asset provenance](docs/brand/hero-assets.md) is recorded.
+
 See the [three vision boards and treatment guidance](docs/brand/README.md), including full-size images and provenance. [Template URLs](TEMPLATES.md) list all six options. The boards are concept references; exact brand tokens and the implemented vector geometry govern website rendering.
+
+The vision-board gallery includes both Hearth originals and three Ocean editions, with paired images for each logo direction. Ocean uses the approved Tidal palette and all-white reversed treatments on teal.
 
 [Back to the README](README.md)

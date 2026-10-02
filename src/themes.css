@@ -1,0 +1,132 @@
+/* Vision-board applications: shared contracts, three compositions, two palettes. */
+.theme-nav,.hero-actions,.hero-art { display:none; }
+.logo-mark { display:none; flex:none; }
+.brand .brand-name { font-size:inherit; }
+.brand .brand-domain { font-size:.75em; }
+html[data-identity="local"] .mark-local,
+html[data-identity="ticket"] .mark-ticket,
+html[data-identity="table"] .mark-table { display:block; }
+:where(html[data-identity]:not([data-identity="legacy"])) { --signal-hover:#922d15; --signal-active:#782411; }
+html[data-ui$="-ocean"] { --signal-hover:#1943a5; --signal-active:#153584; }
+:where(html[data-identity]:not([data-identity="legacy"])) .site { max-width:76rem; }
+:where(html[data-identity]:not([data-identity="legacy"])) header { padding:24px 32px; gap:24px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .brand { display:inline-flex; align-items:center; gap:12px; font-weight:700; font-size:1.5rem; }
+:where(html[data-identity]:not([data-identity="legacy"])) .brand-domain { display:none; }
+:where(html[data-identity]:not([data-identity="legacy"])) .logo-mark { width:44px; height:44px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .theme-nav { display:flex; gap:24px; margin-left:auto; }
+:where(html[data-identity]:not([data-identity="legacy"])) .theme-nav a { display:inline-flex; align-items:center; min-height:44px; font-size:.875rem; font-weight:500; color:var(--ink); text-decoration:none; }
+:where(html[data-identity]:not([data-identity="legacy"])) .theme-nav a:hover { text-decoration:underline; text-decoration-color:var(--signal); }
+:where(html[data-identity]:not([data-identity="legacy"])) .header-note { font-size:.75rem; white-space:nowrap; }
+:where(html[data-identity]:not([data-identity="legacy"])) main { padding:0 32px 48px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .intro { position:relative; display:grid; grid-template-columns:minmax(0,1.1fr) minmax(0,1fr); gap:32px; padding:48px 0 32px; overflow:hidden; }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-copy { position:relative; z-index:1; }
+:where(html[data-identity]:not([data-identity="legacy"])) .eyebrow { font-size:.75rem; letter-spacing:.04em; }
+:where(html[data-identity]:not([data-identity="legacy"])) h1 { font-size:clamp(2.5rem,4.8vw,4rem); line-height:1.05; letter-spacing:-.045em; }
+:where(html[data-identity]:not([data-identity="legacy"])) .intro .signal-line { margin:20px 0; }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-copy>p { font-size:1rem; max-width:32rem; }
+:where(html[data-identity]:not([data-identity="legacy"])) .feature { display:none; }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-actions { display:flex; align-items:center; flex-wrap:wrap; gap:16px; margin-top:24px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-cta { display:inline-flex; align-items:center; justify-content:space-between; gap:24px; min-height:48px; padding:12px 20px; border-radius:4px; background:var(--signal); color:white; font-size:.875rem; font-weight:600; text-decoration:none; }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-cta:hover { background:var(--signal-hover); }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-cta:active { background:var(--signal-active); }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-caption { color:var(--muted); font-size:.75rem; }
+:where(html[data-identity]:not([data-identity="legacy"])) .hero-art { display:block; position:relative; min-height:320px; overflow:hidden; border-radius:8px; }
+.local-plate { display:none; width:100%; height:100%; }
+.art-field { fill:var(--field); }.art-ground { fill:var(--ground); }.art-quiet { fill:var(--quiet); }.art-canvas { fill:var(--canvas); }
+.food-photo { display:none; }
+:where(html[data-identity]:not([data-identity="legacy"])) .filters { position:relative; padding:24px 0; gap:16px; }
+:where(html[data-identity]:not([data-identity="legacy"])) select,
+:where(html[data-identity]:not([data-identity="legacy"])) input { background:var(--canvas); border-color:var(--border); }
+:where(html[data-identity]:not([data-identity="legacy"])) .results-heading { margin:32px 0 24px; }
+:where(html[data-identity]:not([data-identity="legacy"])) #count { color:var(--muted); }
+:where(html[data-identity]:not([data-identity="legacy"])) .grid { grid-template-columns:repeat(3,minmax(0,1fr)); gap:24px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .deal { display:grid; grid-template-rows:auto auto auto auto auto 1fr auto; align-content:start; padding:24px; border-color:var(--quiet); background:var(--canvas); border-radius:8px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .deal:hover { border-color:var(--border); }
+:where(html[data-identity]:not([data-identity="legacy"])) .price { grid-row:1; margin:0 0 16px; font-size:clamp(1.75rem,2.5vw,2.25rem); color:var(--ink); }
+:where(html[data-identity]:not([data-identity="legacy"])) .deal-top { justify-content:flex-start; gap:8px 16px; margin-bottom:16px; align-items:baseline; }
+:where(html[data-identity]:not([data-identity="legacy"])) .badge { padding:0; background:transparent; font-size:.75rem; color:var(--muted); }
+:where(html[data-identity]:not([data-identity="legacy"])) .deal-top>span:last-child { font-family:var(--technical); font-size:.75rem; color:var(--muted); }
+:where(html[data-identity]:not([data-identity="legacy"])) .deal h3 { font-size:1.125rem; }
+:where(html[data-identity]:not([data-identity="legacy"])) .terms { margin-bottom:24px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .deal-foot { font-size:.75rem; }
+:where(html[data-identity]:not([data-identity="legacy"])) .deal-foot>a { gap:8px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .about { margin-top:40px; padding:24px 0; }
+:where(html[data-identity]:not([data-identity="legacy"])) footer { position:relative; padding:32px; gap:16px 24px; }
+:where(html[data-identity]:not([data-identity="legacy"])) .footer-brand { font-size:1.125rem; margin-right:auto; }
+:where(html[data-identity]:not([data-identity="legacy"])) .footer-brand .logo-mark { width:32px; height:32px; }
+
+/* Local: the large plate composition echoes the discovery board. */
+html[data-identity="local"] .local-plate { display:block; }
+html[data-identity="local"] .hero-art { align-self:stretch; }
+html[data-identity="local"] .hero-cta { background:var(--ground); }
+html[data-identity="local"] .hero-cta:hover { background:var(--ink); }
+html[data-identity="local"] .deal { border-top:3px solid var(--ground); }
+
+/* Ticket: photograph, ticket rhythm, and a quieter filter band. */
+html[data-identity="ticket"] .logo-mark { width:56px; }
+html[data-identity="ticket"] .hero-art { margin-top:32px; min-height:300px; }
+html[data-identity="ticket"] .food-photo { display:block; position:absolute; inset:0; background:url('./images/ticket-meal.jpg') 65% center/cover; }
+html[data-identity="ticket"] .intro { grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); }
+html[data-identity="ticket"] .filters { border:0; padding:24px; background:var(--quiet); border-radius:8px; }
+html[data-identity="ticket"] .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+html[data-identity="ticket"] .deal { position:relative; padding:24px 32px; border-color:var(--border); }
+html[data-identity="ticket"] .deal::before,
+html[data-identity="ticket"] .deal::after { content:''; position:absolute; width:16px; height:24px; top:64px; background:var(--canvas); border:1px solid var(--border); }
+html[data-identity="ticket"] .deal::before { left:-1px; border-left:0; border-radius:0 12px 12px 0; }
+html[data-identity="ticket"] .deal::after { right:-1px; border-right:0; border-radius:12px 0 0 12px; }
+html[data-identity="ticket"] .deal-foot { border-top-style:dashed; }
+html[data-identity="ticket"] footer::after { content:''; position:absolute; height:8px; bottom:0; left:32px; right:32px; background:var(--ground); }
+
+/* Table: stacked identity, overhead meal framed by broad Field geometry. */
+html[data-identity="table"] header .brand-name { line-height:1.05; }
+html[data-identity="table"] header .brand-name strong { display:block; }
+html[data-identity="table"] .logo-mark { width:56px; }
+html[data-identity="table"] .hero-art { min-height:352px; border-radius:50% 50% 8px 8px; background:var(--field); }
+html[data-identity="table"] .food-photo { display:block; position:absolute; width:88%; aspect-ratio:1; right:-6%; bottom:-12%; border-radius:50%; background:url('./images/table-meal.jpg') 73% center/cover; }
+html[data-identity="table"] .art-orbit { position:absolute; width:72px; height:72px; top:40px; left:24px; border:12px solid var(--quiet); border-radius:50%; }
+html[data-identity="table"] .art-signal { position:absolute; width:48px; height:4px; top:36px; right:32px; background:var(--signal); }
+html[data-identity="table"] .filters { border-top:4px solid var(--field); }
+html[data-identity="table"] .deal { border:0; border-top:4px solid var(--field); background:var(--quiet); }
+html[data-identity="table"] .deal-location a,
+html[data-identity="table"] .deal-foot a { color:var(--ink); }
+html[data-identity="table"] .deal-foot { border-top-color:var(--border); }
+html[data-identity="table"] footer { border-top:4px solid var(--field); }
+
+@media(max-width:1050px) {
+ :where(html[data-identity]:not([data-identity="legacy"])) .header-note { display:none; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+ :where(html[data-identity]:not([data-identity="legacy"])) .hero-caption { display:none; }
+}
+@media(max-width:700px) {
+ :where(html[data-identity]:not([data-identity="legacy"])) header { flex-wrap:wrap; gap:8px; padding:20px 24px 8px; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .theme-nav { width:100%; margin:0; gap:24px; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .theme-nav a { font-size:.8125rem; }
+ :where(html[data-identity]:not([data-identity="legacy"])) main { padding:0 24px 32px; }
+ html:is([data-identity="local"],[data-identity="ticket"],[data-identity="table"]) .intro { grid-template-columns:1fr; gap:24px; padding:32px 0; }
+ :where(html[data-identity]:not([data-identity="legacy"])) h1 { font-size:clamp(2.25rem,8vw,3.5rem); }
+ html:is([data-identity="local"],[data-identity="ticket"],[data-identity="table"]) .hero-art { min-height:0; height:200px; margin:0; }
+ html[data-identity="local"] .local-plate { width:100%; height:100%; }
+ html[data-identity="table"] .food-photo { width:64%; bottom:-42%; }
+ html[data-identity="table"] .art-orbit { width:48px; height:48px; border-width:8px; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .filters { grid-template-columns:1fr 1fr; }
+ :where(html[data-identity]:not([data-identity="legacy"])) footer { padding:24px; }
+}
+@media(max-width:570px) {
+ :where(html[data-identity]:not([data-identity="legacy"])) .brand { font-size:1.25rem; gap:8px; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .logo-mark { height:36px; width:36px; }
+ html[data-identity="ticket"] .logo-mark,html[data-identity="table"] .logo-mark { width:44px; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .theme-nav { justify-content:space-between; gap:8px; }
+ html:is([data-identity="local"],[data-identity="ticket"],[data-identity="table"]) .grid { grid-template-columns:1fr; gap:16px; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .filters { grid-template-columns:1fr; }
+ html[data-identity="ticket"] .filters { padding:20px; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .results-heading { margin-top:24px; }
+ html[data-identity="table"] .food-photo { width:88%; bottom:-15%; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .footer-brand { width:100%; }
+}
+@media(forced-colors:active) {
+ .logo-mark path { fill:CanvasText; }.mark-ticket path:last-child { fill:Canvas; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .hero-art { display:none; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .hero-cta { border:1px solid ButtonText; }
+ :where(html[data-identity]:not([data-identity="legacy"])) .deal { border:1px solid CanvasText; }
+ html[data-identity="ticket"] .deal::before,html[data-identity="ticket"] .deal::after { display:none; }
+}

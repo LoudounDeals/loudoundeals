@@ -8,9 +8,10 @@ function page(search, hrefs = []) {
   const events = {};
   const links = hrefs.map(href => ({href, getAttribute() { return this.href; }, hasAttribute() { return false; }, setAttribute(key, value) { this[key] = value; }}));
   const themeColor = {setAttribute(key, value) { this[key] = value; }};
-  const document = {documentElement: {dataset: {}}, baseURI: 'https://example.com/deals/', querySelector: () => themeColor, querySelectorAll: () => links, addEventListener: (event, fn) => { events[event] = fn; }};
+  const favicon = {setAttribute(key, value) { this[key] = value; }};
+  const document = {documentElement: {dataset: {}}, baseURI: 'https://example.com/deals/', querySelector: selector => selector === 'link[rel="icon"]' ? favicon : themeColor, querySelectorAll: () => links, addEventListener: (event, fn) => { events[event] = fn; }};
   runInNewContext(script, {URL, location: {href: document.baseURI + search}, document});
-  return {document, links, events, themeColor};
+  return {document, links, events, themeColor, favicon};
 }
 test('only one exact allowlisted template value selects a layout', () => {
   for (const value of ['', '?ui=default', '?ui=unknown', '?ui=Modern', '?ui=modern&ui=default', '?ui=modern&ui=modern', '?ui=%3Cscript%3Ealert(1)%3C/script%3E', '?ui=__proto__']) {
@@ -84,4 +85,24 @@ test('all three Hearth identities select and survive home navigation', () => {
  result.events.DOMContentLoaded();
  assert.equal(new URL(result.links[0].href).searchParams.get('ui'),name);
  }
+});
+
+test('each identity has distinct compact favicon artwork with matching palette', () => {
+  const icons = new Set();
+  for (const name of ['local', 'ticket', 'table']) {
+    const hearth = page('?ui=' + name);
+    const ocean = page('?ui=' + name + '-ocean');
+    assert.equal(hearth.document.documentElement.dataset.identity, name);
+    assert.equal(ocean.document.documentElement.dataset.identity, name);
+    const warm = decodeURIComponent(hearth.favicon.href);
+    const cool = decodeURIComponent(ocean.favicon.href);
+    assert(warm.includes('viewBox="0 0 32 32"'));
+    assert(warm.includes('#62684a'));
+    assert(cool.includes('#356567'));
+    assert(!cool.includes('#62684a'));
+    assert(!warm.includes('var('));
+    icons.add(warm);
+  }
+  assert.equal(icons.size, 3);
+  assert.equal(page('?ui=modern-list').document.documentElement.dataset.identity, 'legacy');
 });

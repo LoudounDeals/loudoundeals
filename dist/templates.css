@@ -40,36 +40,3 @@ html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal-foot { grid-column
   html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal { display:flex; }
   html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .price { margin-bottom:1rem; }
 }
-
-/* Original vector marks redrawn from the three concept directions. */
-.logo-mark { display:none; flex:none; width:44px; height:44px; }
-html:is([data-ui="local"],[data-ui="local-ocean"]) .mark-local,
-html:is([data-ui="ticket"],[data-ui="ticket-ocean"]) .mark-ticket,
-html:is([data-ui="table"],[data-ui="table-ocean"]) .mark-table { display:block; }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .brand { display:inline-flex; align-items:center; gap:12px; }
-.brand .brand-name { font-size:inherit; }
-.brand .brand-domain { font-size:.75em; }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .brand-domain { display:none; }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .site { max-width:72rem; }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .intro { padding-block:2rem; }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .deal { display:grid; grid-template-rows:auto auto auto auto auto 1fr auto; align-content:start; }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .price { grid-row:1; margin:0 0 1rem; }
-html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .deal-top { margin-bottom:1rem; }
-html:is([data-ui="ticket"],[data-ui="ticket-ocean"]) .mark-ticket { width:56px; }
-html:is([data-ui="ticket"],[data-ui="ticket-ocean"]) .feature { background:var(--quiet); color:var(--ink); border-left:4px solid var(--signal); }
-html:is([data-ui="ticket"],[data-ui="ticket-ocean"]) .feature a { color:var(--ink); }
-html:is([data-ui="ticket"],[data-ui="ticket-ocean"]) .feature :focus-visible { outline-color:var(--ink); }
-html:is([data-ui="table"],[data-ui="table-ocean"]) .mark-table { width:56px; }
-html:is([data-ui="table"],[data-ui="table-ocean"]) header .brand-name { display:block; line-height:1.05; }
-html:is([data-ui="table"],[data-ui="table-ocean"]) header .brand-name strong { display:block; }
-html:is([data-ui="table"],[data-ui="table-ocean"]) .feature { background:var(--field); color:var(--ink); }
-html:is([data-ui="table"],[data-ui="table-ocean"]) .feature a { color:var(--ink); }
-html:is([data-ui="table"],[data-ui="table-ocean"]) .feature :focus-visible { outline-color:var(--ink); }
-@media(max-width:570px) {
- html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .grid { grid-template-columns:1fr; }
- .logo-mark { width:32px; height:32px; }
- html:is([data-ui="ticket"],[data-ui="ticket-ocean"],[data-ui="table"],[data-ui="table-ocean"]) .logo-mark { width:40px; }
- html:is([data-ui="local"],[data-ui="ticket"],[data-ui="table"],[data-ui$="-ocean"]) .brand { gap:8px; font-size:1.25rem; }
-}
-@media(forced-colors:active) { .logo-mark path { fill:CanvasText; } .mark-local path:first-child { fill:CanvasText; } .mark-ticket path:last-child { fill:Canvas; } }

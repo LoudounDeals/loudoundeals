@@ -7,9 +7,9 @@ For local testing, run `npm run build` and `npm run dev`, then open `http://127.
 | Value | Presentation |
 | --- | --- |
 | Missing or `default` | Local (Hearth), the default |
-| `local` / `local-ocean` | Local discovery pin, Hearth / Tidal palette |
-| `ticket` / `ticket-ocean` | LD ticket identity, Hearth / Tidal palette |
-| `table` / `table-ocean` | Shared table identity, Hearth / Tidal palette |
+| `local` / `local-ocean` | Pin header, geometric plate hero, Ground card rules; Hearth / Tidal |
+| `ticket` / `ticket-ocean` | LD ticket header, burger hero, Quiet filters, notched cards; Hearth / Tidal |
+| `table` / `table-ocean` | Stacked table header, overhead meal hero, Field geometry, Quiet cards; Hearth / Tidal |
 | `modern` | Compact introduction and two-column deal cards; one column on narrow screens |
 | `modern-list` | Full-width offer rows with a separate price column; stacked on smaller screens |
 | `ocean` | Tidal palette: sandy Canvas, teal Ground, sea-glass Field and cobalt Signal; card layout |
@@ -30,6 +30,8 @@ Automated tests check selection and navigation behavior. Visual release checks s
 
 ### Browser verification — October 2, 2026
 
+The Local, Ticket, and Table redesigns and their Ocean clones were checked at desktop width and 320 px. All six use one column on narrow screens with no horizontal document overflow. Search, empty-state recovery, Reset, template persistence, and visible Reset focus were checked in Ticket Ocean. Compact favicons were visually inspected at 16, 32, and 64 pixels. See [the recorded previews and checks](docs/brand/previews/README.md). The earlier checks below cover the retained modern/list templates.
+
 | Check | Result |
 | --- | --- |
 | List layout at desktop width | Loads with the established brand typography and colors |
@@ -46,12 +48,12 @@ The address is the only source of selection. No cookies, localStorage, or sessio
 
 Same-origin navigation links receive the selected template value while retaining their own query parameters and fragments. Fragment-only links, downloads, restaurant links, maps and the external survey remain unchanged. The site currently has one page; future subpages must include the template script and styles to apply the selection. Links inserted later are handled on activation.
 
-The small head script selects the layout before styles render. With JavaScript disabled, the production layout and static listings remain available.
+The small head script selects the layout and compact favicon before styles render. With JavaScript disabled, Local and its pin favicon remain available with static listings. Decorative food photos load only for Ticket and Table, from self-hosted JPEGs. Local's artwork is inline SVG and CSS using exact palette tokens.
 
 ## Add another template
 
 1. Define a fixed name in the allowlist in [templates.js](src/templates.js) and the filter URL handling in [app.mjs](src/app.mjs).
-2. Add styles scoped to `html[data-ui="name"]` in [templates.css](src/templates.css). Reuse brand tokens and keep all offer details and controls accessible.
+2. Add styles scoped to `html[data-ui="name"]` in [templates.css](src/templates.css), or extend the identity components in [themes.css](src/themes.css). Reuse brand tokens and keep all offer details and controls accessible.
 3. Extend [template tests](scripts/templates.test.mjs), run `npm test` and `npm run build`, then check keyboard operation, narrow-screen reflow and enlarged text in a browser.
 4. Document its name and behavior here before publishing.
 
