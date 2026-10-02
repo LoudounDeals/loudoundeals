@@ -7,7 +7,7 @@ For local testing, run `npm run build` and `npm run dev`, then open `http://127.
 | Value | Presentation |
 | --- | --- |
 | Missing or `default` | Local (Hearth), the default |
-| `local` / `local-ocean` | Pin header, geometric plate hero, Ground card rules; Hearth / Tidal |
+| `local` / `local-ocean` | Pin header and favicon, photographic meal hero, tinted cards with price bands and town labels; Hearth / Tidal |
 | `ticket` / `ticket-ocean` | LD ticket header, burger hero, Quiet filters, notched cards; Hearth / Tidal |
 | `table` / `table-ocean` | Stacked table header, overhead meal hero, Field geometry, Quiet cards; Hearth / Tidal |
 | `modern` | Compact introduction and two-column deal cards; one column on narrow screens |
@@ -48,7 +48,7 @@ The address is the only source of selection. No cookies, localStorage, or sessio
 
 Same-origin navigation links receive the selected template value while retaining their own query parameters and fragments. Fragment-only links, downloads, restaurant links, maps and the external survey remain unchanged. The site currently has one page; future subpages must include the template script and styles to apply the selection. Links inserted later are handled on activation.
 
-The small head script selects the layout and compact favicon before styles render. With JavaScript disabled, Local and its pin favicon remain available with static listings. Decorative food photos load only for Ticket and Table, from self-hosted JPEGs. Local's artwork is inline SVG and CSS using exact palette tokens.
+The small head script selects the layout and compact favicon before styles render. With JavaScript disabled, Local and its pin favicon remain available with static listings. Local and Table share an overhead meal photo; Ticket uses a burger photo. Decorative photography is self-hosted and framed with CSS using exact palette tokens.
 
 ## Add another template
 

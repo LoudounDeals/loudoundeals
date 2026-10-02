@@ -8,7 +8,7 @@ These three directions apply Scott Brand System v1.0 to LoudounDeals. Local is t
 
 ![Local Ocean identity vision board](01-local-find-ocean.png)
 
-The pin communicates nearby discovery. Use the horizontal name and pin in the website header; the isolated pin suits avatars and small placements. Keep the Signal accent on Canvas; use an entirely single-color mark for monochrome or reversed applications. Implemented as `ui=local` and `ui=local-ocean`.
+The pin communicates nearby discovery. Use the horizontal name and pin in the website header; the isolated pin suits avatars and small placements. Keep the Signal accent on Canvas; use an entirely single-color mark for monochrome or reversed applications. Implemented as `ui=local` and `ui=local-ocean`. The current Local iteration retains this logo and favicon while adopting Table's photographic hero and tinted card language, with added price bands, town labels, and source buttons. The original vision boards above remain preserved as the identity's starting point.
 
 ## Ticket · The everyday ticket
 

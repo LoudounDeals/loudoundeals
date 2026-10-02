@@ -5,8 +5,8 @@ October 2, 2026 · Scott Brand System v1.0 · Generated with the built-in image_
 | Asset | Purpose | Source and processing | Distribution |
 | --- | --- | --- | --- |
 | `ticket-meal.jpg` | Decorative Ticket / Ticket Ocean hero | Original generated burger photograph, encoded as JPEG quality 85 without resizing or compositional changes | `src/images/` and `dist/images/` |
-| `table-meal.jpg` | Decorative Table / Table Ocean hero | Original generated overhead meal photograph, encoded as JPEG quality 85 without resizing or compositional changes | `src/images/` and `dist/images/` |
-| Inline Local plate SVG | Decorative Local / Local Ocean hero | Original basic geometry based on the vision boards; uses palette variables | `src/index.html` and built HTML |
+| `table-meal.jpg` | Decorative Local / Local Ocean and Table / Table Ocean hero | Original generated overhead meal photograph, encoded as JPEG quality 85 without resizing or compositional changes | `src/images/` and `dist/images/` |
+| Inline plate SVG | Preserved original geometric hero; hidden in the current Local iteration | Original basic geometry based on the vision boards; uses palette variables | `src/index.html` and built HTML |
 | Compact favicon SVGs | Selected identity in browser tabs | Original 32-unit pin, ticket, and table drawings with explicit palette colors; no font dependency | Static default in HTML; selected variants in `templates.js` |
 
 The food is illustrative, not a photograph from a listed restaurant and not an offer. No third-party photo, logo, or stock asset was supplied. Both photos are outside meaningful page content and hidden from assistive technology. They do not contain prices, controls, or essential information. Keep them separate from offer records. Review recognizable content before release; generated imagery is not automatically cleared for every use.

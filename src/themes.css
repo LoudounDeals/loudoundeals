@@ -6,8 +6,8 @@
 html[data-identity="local"] .mark-local,
 html[data-identity="ticket"] .mark-ticket,
 html[data-identity="table"] .mark-table { display:block; }
-:where(html[data-identity]:not([data-identity="legacy"])) { --signal-hover:#922d15; --signal-active:#782411; }
-html[data-ui$="-ocean"] { --signal-hover:#1943a5; --signal-active:#153584; }
+:root { --signal-hover:#922d15; --signal-active:#782411; }
+html:is([data-ui="ocean"],[data-ui="ocean-list"],[data-ui$="-ocean"]) { --signal-hover:#1943a5; --signal-active:#153584; }
 :where(html[data-identity]:not([data-identity="legacy"])) .site { max-width:76rem; }
 :where(html[data-identity]:not([data-identity="legacy"])) header { padding:24px 32px; gap:24px; }
 :where(html[data-identity]:not([data-identity="legacy"])) .brand { display:inline-flex; align-items:center; gap:12px; font-weight:700; font-size:1.5rem; }
@@ -55,12 +55,24 @@ html[data-ui$="-ocean"] { --signal-hover:#1943a5; --signal-active:#153584; }
 :where(html[data-identity]:not([data-identity="legacy"])) .footer-brand { font-size:1.125rem; margin-right:auto; }
 :where(html[data-identity]:not([data-identity="legacy"])) .footer-brand .logo-mark { width:32px; height:32px; }
 
-/* Local: the large plate composition echoes the discovery board. */
-html[data-identity="local"] .local-plate { display:block; }
-html[data-identity="local"] .hero-art { align-self:stretch; }
+/* Local: discovery identity with Table's photographic warmth and richer offers. */
+html[data-identity="local"] .hero-art { align-self:stretch; min-height:352px; border-radius:50% 50% 8px 8px; background:var(--field); }
+html[data-identity="local"] .food-photo { display:block; position:absolute; width:88%; aspect-ratio:1; right:-6%; bottom:-12%; border-radius:50%; background:url('./images/table-meal.jpg') 73% center/cover; }
+html[data-identity="local"] .art-orbit { position:absolute; width:72px; height:72px; top:40px; left:24px; border:12px solid var(--quiet); border-radius:50%; }
+html[data-identity="local"] .art-signal { position:absolute; width:48px; height:4px; top:36px; right:32px; background:var(--signal); }
 html[data-identity="local"] .hero-cta { background:var(--ground); }
 html[data-identity="local"] .hero-cta:hover { background:var(--ink); }
-html[data-identity="local"] .deal { border-top:3px solid var(--ground); }
+html[data-identity="local"] .filters { border-top:4px solid var(--field); }
+html[data-identity="local"] .deal { background:var(--quiet); border:1px solid var(--quiet); border-top:4px solid var(--field); overflow:hidden; }
+html[data-identity="local"] .deal:hover { border-color:var(--ground); }
+html[data-identity="local"] .price { background:var(--canvas); margin:-24px -24px 20px; padding:24px 24px 16px; border-bottom:1px solid var(--field); }
+html[data-identity="local"] .deal-top { align-items:center; justify-content:space-between; gap:8px 12px; }
+html[data-identity="local"] .badge { flex:1 1 140px; font-size:.875rem; }
+html[data-identity="local"] .deal-top>span:last-child { background:var(--ground); color:#fff; padding:4px 8px; border-radius:4px; font-size:.875rem; }
+html[data-identity="local"] .deal-location a { color:var(--ink); }
+html[data-identity="local"] .deal-foot { border-top-color:var(--border); align-items:center; gap:12px; }
+html[data-identity="local"] .deal-foot>span { flex:1 1 140px; }
+html[data-identity="local"] footer { border-top:4px solid var(--field); }
 
 /* Ticket: photograph, ticket rhythm, and a quieter filter band. */
 html[data-identity="ticket"] .logo-mark { width:56px; }
@@ -88,7 +100,6 @@ html[data-identity="table"] .art-signal { position:absolute; width:48px; height:
 html[data-identity="table"] .filters { border-top:4px solid var(--field); }
 html[data-identity="table"] .deal { border:0; border-top:4px solid var(--field); background:var(--quiet); }
 html[data-identity="table"] .deal-location a,
-html[data-identity="table"] .deal-foot a { color:var(--ink); }
 html[data-identity="table"] .deal-foot { border-top-color:var(--border); }
 html[data-identity="table"] footer { border-top:4px solid var(--field); }
 
@@ -105,9 +116,8 @@ html[data-identity="table"] footer { border-top:4px solid var(--field); }
  html:is([data-identity="local"],[data-identity="ticket"],[data-identity="table"]) .intro { grid-template-columns:1fr; gap:24px; padding:32px 0; }
  :where(html[data-identity]:not([data-identity="legacy"])) h1 { font-size:clamp(2.25rem,8vw,3.5rem); }
  html:is([data-identity="local"],[data-identity="ticket"],[data-identity="table"]) .hero-art { min-height:0; height:200px; margin:0; }
- html[data-identity="local"] .local-plate { width:100%; height:100%; }
- html[data-identity="table"] .food-photo { width:64%; bottom:-42%; }
- html[data-identity="table"] .art-orbit { width:48px; height:48px; border-width:8px; }
+ html:is([data-identity="local"],[data-identity="table"]) .food-photo { width:64%; bottom:-42%; }
+ html:is([data-identity="local"],[data-identity="table"]) .art-orbit { width:48px; height:48px; border-width:8px; }
  :where(html[data-identity]:not([data-identity="legacy"])) .filters { grid-template-columns:1fr 1fr; }
  :where(html[data-identity]:not([data-identity="legacy"])) footer { padding:24px; }
 }
@@ -120,10 +130,17 @@ html[data-identity="table"] footer { border-top:4px solid var(--field); }
  :where(html[data-identity]:not([data-identity="legacy"])) .filters { grid-template-columns:1fr; }
  html[data-identity="ticket"] .filters { padding:20px; }
  :where(html[data-identity]:not([data-identity="legacy"])) .results-heading { margin-top:24px; }
- html[data-identity="table"] .food-photo { width:88%; bottom:-15%; }
+ html:is([data-identity="local"],[data-identity="table"]) .food-photo { width:88%; bottom:-15%; }
  :where(html[data-identity]:not([data-identity="legacy"])) .footer-brand { width:100%; }
 }
+/* The source offer is the primary action in every card and list template. */
+.deal-foot { align-items:center; gap:12px; }
+.deal-foot>span { flex:1 1 140px; }
+.deal-foot>a { background:var(--signal); color:#fff; min-height:44px; padding:12px 16px; border-radius:4px; font-size:.875rem; font-weight:600; text-decoration:none; gap:8px; }
+.deal-foot>a:hover { background:var(--signal-hover); text-decoration:underline; }
+.deal-foot>a:active { background:var(--signal-active); }
 @media(forced-colors:active) {
+ .deal-foot>a { border:1px solid ButtonText; }
  .logo-mark path { fill:CanvasText; }.mark-ticket path:last-child { fill:Canvas; }
  :where(html[data-identity]:not([data-identity="legacy"])) .hero-art { display:none; }
  :where(html[data-identity]:not([data-identity="legacy"])) .hero-cta { border:1px solid ButtonText; }

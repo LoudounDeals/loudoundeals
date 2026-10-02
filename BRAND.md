@@ -1,6 +1,6 @@
 # LoudounDeals · Scott Brand System v1.0
 
-The default Local application uses Hearth: warm Canvas, charcoal Ink, olive Ground, clay Field, vermilion Signal, and stone Quiet. `src/brand.css` defines the foundation; `src/themes.css` applies the vision-board components. Local uses Field in its plate composition and Table uses Field behind its overhead meal; every role need not appear on every page.
+The default Local application uses Hearth: warm Canvas, charcoal Ink, olive Ground, clay Field, vermilion Signal, and stone Quiet. `src/brand.css` defines the foundation; `src/themes.css` applies the vision-board components. Local and Table use Field behind their overhead meal photography; every role need not appear on every page.
 
 URL-selected variations are documented in [the template guide](TEMPLATES.md). Local, Ticket, and Table have complete header, hero, filter, card, footer, and favicon treatments; each has a matching Ocean clone using the guide's Tidal palette: sandy Canvas, deep Ink, teal Ground, sea-glass Field, cobalt Signal, and mist Quiet. Earlier `modern`, `modern-list`, `ocean`, and `ocean-list` layouts remain available. All versions share content, typography, and filter behavior. Complete accessibility review remains required.
 
@@ -18,7 +18,7 @@ Run `npm test` and `npm run build`. Before release, check real font rendering, k
 
 Local is the default, including absent, invalid, repeated, and `ui=default` selections. Ticket and Table are alternatives. Their Ocean clones change only the palette, preserving geometry, layout, typography, and behavior. Header symbols are inline SVG with live name text.
 
-Local combines a horizontal pin wordmark, original geometric plate hero, Ground call to action, and cards with a Ground top rule. Ticket combines its LD mark, burger photograph, Quiet filter band, two-column ticket cards with notched edges, and a restrained footer rule. Table combines its stacked wordmark, a meal framed by Field geometry, three-column Quiet cards, and a Field footer rule. All cards put prices first and retain restrictions and source links. Mobile layouts use one column; meaningful controls remain at least 44 px tall.
+Local combines its horizontal pin wordmark and existing pin favicon with Table's photographic meal hero and Field framing. Its offer cards use Quiet surfaces, a Canvas price band, Ground town labels, and a Signal View offer button with white text, stronger type, and a minimum 44 px target. Field rules connect the hero, filters, cards, and footer. Ticket combines its LD mark, burger photograph, Quiet filter band, two-column ticket cards with notched edges, and a restrained footer rule. Table combines its stacked wordmark, a meal framed by Field geometry, three-column Quiet cards, and a Field footer rule. All cards put prices first and retain restrictions and source links. Mobile layouts use one column; meaningful controls remain at least 44 px tall.
 
 The header links target existing sections: Deals, Find a meal, and How we check. The footer repeats the selected symbol. Favicons use separate compact 32-unit SVG drawings with thick features rather than shrinking the header marks; Local is also the static no-JavaScript favicon. Food JPEGs are self-hosted and their [asset provenance](docs/brand/hero-assets.md) is recorded.
 
@@ -27,3 +27,5 @@ See the [three vision boards and treatment guidance](docs/brand/README.md), incl
 The vision-board gallery includes both Hearth originals and three Ocean editions, with paired images for each logo direction. Ocean uses the approved Tidal palette and all-white reversed treatments on teal.
 
 [Back to the README](README.md)
+
+Every template, including the earlier card and list layouts, uses Signal-filled View offer links with white semibold labels, minimum 44 px targets, and darker hover and pressed states. Hearth uses rust; Ocean uses cobalt.
