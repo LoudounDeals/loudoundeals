@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-01T19:18:17.055Z",
+  "updatedAt": "2026-10-02T10:28:59.668Z",
   "deals": [
     {
       "id": "andolinis-monday-pizza",
@@ -15,7 +15,7 @@
       "timeLabel": "Mondays",
       "terms": "Mention the coupon. Limit two pizzas. Cannot combine offers. One topping available for $10.99.",
       "sourceUrl": "https://andolinis-pizza.com/specials/",
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "evidence": [
         "Monday Madness",
@@ -90,7 +90,7 @@
       "timeLabel": "Tuesdays · Dine-in",
       "terms": "Buy two qualifying regular-menu entrées. One free kids’ meal per table, age 13 or under. Cannot combine discounts.",
       "sourceUrl": "https://saahilrestaurant.com/kids-eat-free-tuesdays",
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "evidence": [
         "two entrées",
@@ -191,7 +191,7 @@
       "timeLabel": "Saturdays · Online orders",
       "terms": "Use promo code SATURDAY. Cannot combine with other offers.",
       "sourceUrl": "https://andolinis-pizza.com/specials/",
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "evidence": [
         "15% off",
@@ -241,7 +241,7 @@
         "Ribs",
         "$27"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -263,7 +263,7 @@
         "TUESDAY",
         "2 for $8"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -286,7 +286,7 @@
         "Wings",
         "$27"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -309,7 +309,7 @@
         "Ribeye",
         "$23"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -336,7 +336,7 @@
         "Happy Hour",
         "10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -363,7 +363,7 @@
         "Happy Hour",
         "10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -390,7 +390,7 @@
         "Happy Hour",
         "8"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -417,7 +417,7 @@
         "Happy Hour",
         "9"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -444,7 +444,7 @@
         "Happy Hour",
         "9"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -498,7 +498,7 @@
         "Happy Hour",
         "11"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -520,7 +520,7 @@
         "Tuesday",
         "$25"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -542,7 +542,7 @@
         "Tuesday",
         "8 Wings"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -571,7 +571,7 @@
         "2pm-6pm",
         "2pm-5pm"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -593,7 +593,7 @@
         "Specialty",
         "$10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -622,7 +622,7 @@
         "2pm-6pm",
         "2pm-5pm"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -644,7 +644,7 @@
         "Specialty",
         "$10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -672,7 +672,7 @@
         "Apps $4",
         "7 DAYS A WEEK"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "16:00"
@@ -702,7 +702,7 @@
         "Apps $6",
         "7 DAYS A WEEK"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "16:00",
       "end": "18:00"
@@ -731,7 +731,7 @@
       "evidence": [
         "27.99"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -758,7 +758,7 @@
       "evidence": [
         "23.99"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -785,7 +785,7 @@
       "evidence": [
         "2.00 off each"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -812,7 +812,7 @@
       "evidence": [
         "$25 order"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -834,7 +834,7 @@
         "Monday Madness",
         "9.99"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -856,7 +856,7 @@
         "Senior Tuesday",
         "60+"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -878,7 +878,7 @@
         "Kids Eat",
         "WEDNESDAYS"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -906,7 +906,7 @@
         "Double Deal",
         "27.99"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -933,7 +933,7 @@
       "evidence": [
         "50 % Off Pasta"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -960,7 +960,7 @@
       "evidence": [
         "3OFF"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active"
     },
     {
@@ -987,7 +987,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
@@ -1016,7 +1016,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
@@ -1045,7 +1045,7 @@
         "Monday - Friday 3-6pm",
         "8"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
@@ -1074,7 +1074,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
@@ -1103,7 +1103,7 @@
         "Monday - Friday 3-6pm",
         "6"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
@@ -1132,7 +1132,7 @@
         "Monday - Friday 3-6pm",
         "8"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
@@ -1161,7 +1161,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
@@ -1190,7 +1190,7 @@
         "Monday - Friday 3-6pm",
         "8"
       ],
-      "lastChecked": "2026-10-01",
+      "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
       "end": "18:00"
