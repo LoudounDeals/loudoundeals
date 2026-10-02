@@ -14,12 +14,12 @@ function page(search, hrefs = []) {
 }
 test('only one exact allowlisted template value selects a layout', () => {
   for (const value of ['', '?ui=default', '?ui=unknown', '?ui=Modern', '?ui=modern&ui=default', '?ui=modern&ui=modern', '?ui=%3Cscript%3Ealert(1)%3C/script%3E', '?ui=__proto__']) {
-    assert.equal(page(value).document.documentElement.dataset.ui, 'default', value);
+    assert.equal(page(value).document.documentElement.dataset.ui, 'local', value);
   }
   assert.equal(page('?ui=modern').document.documentElement.dataset.ui, 'modern');
   assert.equal(page('?ui=modern-list').document.documentElement.dataset.ui, 'modern-list');
-  assert.equal(page('?ui=list').document.documentElement.dataset.ui, 'default');
-  for (const name of ['ocean', 'ocean-list']) {
+  assert.equal(page('?ui=list').document.documentElement.dataset.ui, 'local');
+  for (const name of ['ocean', 'ocean-list', 'local-ocean', 'ticket-ocean', 'table-ocean']) {
     const result = page('?ui=' + name, ['./?day=all#deals']);
     assert.equal(result.document.documentElement.dataset.ui, name);
     assert.equal(result.themeColor.content, '#F2F1E9');
@@ -53,12 +53,12 @@ test('external, fragment, download and executable links are untouched', () => {
   assert.deepEqual(links.map(link => link.href), [...hrefs, './deals.json']);
   const baseline = page('?ui=invalid', ['./about']);
   baseline.events.DOMContentLoaded();
-  assert.equal(baseline.links[0].href, './about');
+  assert.equal(new URL(baseline.links[0].href).searchParams.get('ui'), 'local');
 });
 
 test('filter rendering and reset preserve selection, unrelated parameters and fragment', async () => {
   const app = (await readFile('src/app.mjs', 'utf8')).replace(/^import[^;]+;/, '');
-  for (const [search, expected] of [...['modern', 'modern-list', 'ocean', 'ocean-list'].map(name => [`?ui=${name}&campaign=friend&day=all`, name]), ['?ui=list&campaign=friend', null], ['?ui=modern&ui=modern&campaign=friend', null], ['?ui=%3Cscript%3E&campaign=friend', null]]) {
+  for (const [search, expected] of [...['default', 'modern', 'modern-list', 'ocean', 'ocean-list', 'local', 'ticket', 'table', 'local-ocean', 'ticket-ocean', 'table-ocean'].map(name => [`?ui=${name}&campaign=friend&day=all`, name]), ['?ui=list&campaign=friend', null], ['?ui=modern&ui=modern&campaign=friend', null], ['?ui=%3Cscript%3E&campaign=friend', null]]) {
     const callbacks = {};
     const elements = Object.fromEntries(['day', 'town', 'kind', 'query'].map(name => [name, {value: {day: 'today', town: 'all', kind: 'all', query: ''}[name], tagName: name === 'query' ? 'INPUT' : 'SELECT', selectedIndex: 0, options: [{}]}]));
     const form = {elements, addEventListener() {}, reset() { for (const name of Object.keys(elements)) elements[name].value = {day: 'today', town: 'all', kind: 'all', query: ''}[name]; }};
@@ -74,4 +74,14 @@ test('filter rendering and reset preserve selection, unrelated parameters and fr
       assert.equal(url.hash, '#deals');
     }
   }
+});
+
+test('all three Hearth identities select and survive home navigation', () => {
+ for (const name of ['local','ticket','table']) {
+ const result=page('?ui='+name,['./']);
+ assert.equal(result.document.documentElement.dataset.ui,name);
+ assert.equal(result.themeColor.content,'#F5F1E8');
+ result.events.DOMContentLoaded();
+ assert.equal(new URL(result.links[0].href).searchParams.get('ui'),name);
+ }
 });

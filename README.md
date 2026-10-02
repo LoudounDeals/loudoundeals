@@ -13,7 +13,7 @@ Start with the task you want to do. This README covers everyday work; linked gui
 | Add an offer or review an update | [Daily updates](#daily-updates) and [Content](#content) |
 | Publish or configure hosting | [Hosting and domain](#hosting-and-domain) |
 | Select or add a UI template | [URL-selected templates](TEMPLATES.md) |
-| Understand the brand application | [Brand notes](BRAND.md) |
+| Understand the brand application | [Brand notes](BRAND.md), [logo vision boards](docs/brand/README.md) |
 
 Documentation follows progressive depth: this README gives practical starting points, and linked guides explain the details. Explain unfamiliar terms, keep instructions direct and label planned work clearly.
 
@@ -41,7 +41,7 @@ Tests use Node's built-in test runner. A passing run means the implemented check
 
 Our target is the applicable Level 1 requirements in OWASP ASVS 5.0.0, a standard for checking application security, plus selected Level 2 protections for updater requests. Coverage is still in progress. [The security guide](SECURITY.md) explains the scope, tested protections and remaining work. Its [request safety section](SECURITY.md#updater-request-safety) describes the download limits; [the ASVS evidence](SECURITY.md#asvs-evidence-for-this-pass) maps tested cases to specific requirements.
 
-The project's direction is a no-cookie policy. The application contains no cookie-setting code; production responses and external services still need verification. Review future analytics, embeds and integrations against that goal. URL-selected templates are implemented without browser storage. Use `?ui=modern` to opt in; see [template instructions](TEMPLATES.md).
+The project's direction is a no-cookie policy. The application contains no cookie-setting code; production responses and external services still need verification. Review future analytics, embeds and integrations against that goal. URL-selected templates are implemented without browser storage. Local is the default. Use `?ui=ticket`, `?ui=table`, or their `-ocean` clones to compare identities; see [template instructions](TEMPLATES.md).
 
 ## Daily updates
 

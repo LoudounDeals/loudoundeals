@@ -1,19 +1,22 @@
 # URL-selected templates
 
-After deployment, use `https://loudoundeals.com/?ui=modern` to preview the compact modern layout. Use `?ui=modern-list` for a more distinct comparison with full-width offer rows. Share a template URL with anyone who wants to try it. Remove `ui` or use `?ui=default` to return to the production layout.
+After deployment, use `https://loudoundeals.com/?ui=modern` to preview the compact modern layout. Use `?ui=modern-list` for a more distinct comparison with full-width offer rows. Share a template URL with anyone who wants to try it. Remove `ui` or use `?ui=default` to select Local.
 
 For local testing, run `npm run build` and `npm run dev`, then open `http://127.0.0.1:4173/?ui=modern-list` or `http://127.0.0.1:4173/?ui=modern`. Local changes appear after rebuilding and reloading the browser; they do not change the public site.
 
 | Value | Presentation |
 | --- | --- |
-| Missing or `default` | Existing production layout |
+| Missing or `default` | Local (Hearth), the default |
+| `local` / `local-ocean` | Local discovery pin, Hearth / Tidal palette |
+| `ticket` / `ticket-ocean` | LD ticket identity, Hearth / Tidal palette |
+| `table` / `table-ocean` | Shared table identity, Hearth / Tidal palette |
 | `modern` | Compact introduction and two-column deal cards; one column on narrow screens |
 | `modern-list` | Full-width offer rows with a separate price column; stacked on smaller screens |
 | `ocean` | Tidal palette: sandy Canvas, teal Ground, sea-glass Field and cobalt Signal; card layout |
 | `ocean-list` | Ocean colors with full-width offer rows |
-| Unknown or repeated | Existing production layout |
+| Unknown or repeated | Local (Hearth) |
 
-There are four opt-in options. `default` remains the production fallback. The former `list` name is now `modern-list`; `?ui=list` falls back to the production layout.
+There are six logo templates plus the four earlier options. Local is the fallback for missing, unknown, or repeated values; `default` is an alias for Local. The three Ocean clones preserve the corresponding logo and layout while changing only the palette. See the [vision boards](docs/brand/README.md). The former `list` name is now `modern-list`; `?ui=list` falls back to the production layout.
 
 All layouts use the LoudounDeals application of Scott's Brand System v1.0, with self-hosted fonts. Modern variants use Hearth; Ocean variants use the approved Tidal palette. See [brand notes](BRAND.md).
 
