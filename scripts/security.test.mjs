@@ -47,6 +47,8 @@ test('production build escapes hostile text and attributes, protects embedded JS
     const result = spawnSync(process.execPath, ['scripts/build.mjs'], {cwd: root, env: {...process.env, FEATURE_THEME_SWITCHER: '', NODE_OPTIONS: ''}, encoding: 'utf8'});
     assert.equal(result.status, 0, result.stderr);
     const html = await readFile(join(root, 'dist', 'index.html'), 'utf8');
+    assert.match(html, /src="\.\/templates\.js\?v=[a-f0-9]{12}"/);
+    assert.match(html, /href="\.\/themes\.css\?v=[a-f0-9]{12}"/);
     assert(!html.includes(payload));
     assert(html.includes('&lt;/script&gt;&lt;img src=x onerror=&quot;alert(1)&quot;&gt;'));
     assert(html.includes('href="https://example.com/?x=&quot; onmouseover=&quot;alert(1)&amp;y=&lt;script&gt;"'));
