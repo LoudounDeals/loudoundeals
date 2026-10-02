@@ -56,10 +56,10 @@ html:is([data-ui="ocean"],[data-ui="ocean-list"],[data-ui$="-ocean"]) { --signal
 :where(html[data-identity]:not([data-identity="legacy"])) .footer-brand .logo-mark { width:32px; height:32px; }
 
 /* Local: discovery identity with Table's photographic warmth and richer offers. */
-html[data-identity="local"] .hero-art { align-self:stretch; min-height:352px; border-radius:50% 50% 8px 8px; background:var(--field); }
-html[data-identity="local"] .food-photo { display:block; position:absolute; width:88%; aspect-ratio:1; right:-6%; bottom:-12%; border-radius:50%; background:url('./images/table-meal.jpg') 73% center/cover; }
-html[data-identity="local"] .art-orbit { position:absolute; width:72px; height:72px; top:40px; left:24px; border:12px solid var(--quiet); border-radius:50%; }
-html[data-identity="local"] .art-signal { position:absolute; width:48px; height:4px; top:36px; right:32px; background:var(--signal); }
+html[data-identity="local"] .hero-art { align-self:stretch; min-height:352px; border-radius:80px 8px 8px 8px; background:var(--field); }
+html[data-identity="local"] .food-photo { display:block; position:absolute; inset:16px 16px 16px 48px; border-radius:64px 4px 4px 4px; background:url('./images/local-meal.jpg') center/cover; }
+html[data-identity="local"] .art-orbit { position:absolute; width:24px; height:32px; top:72px; left:12px; background:var(--ground); border:0; border-radius:0; mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 80'%3E%3Cpath fill-rule='evenodd' d='M34 4a30 30 0 0 1 30 30c0 18-30 42-30 42S4 52 4 34A30 30 0 0 1 34 4Zm0 16a14 14 0 1 0 0 28 14 14 0 0 0 0-28Z'/%3E%3C/svg%3E") center/contain no-repeat; }
+html[data-identity="local"] .art-signal { position:absolute; width:18px; height:6px; top:5px; right:24px; background:var(--signal); }
 html[data-identity="local"] .hero-cta { background:var(--ground); }
 html[data-identity="local"] .hero-cta:hover { background:var(--ink); }
 html[data-identity="local"] .filters { border-top:4px solid var(--field); }
@@ -116,8 +116,8 @@ html[data-identity="table"] footer { border-top:4px solid var(--field); }
  html:is([data-identity="local"],[data-identity="ticket"],[data-identity="table"]) .intro { grid-template-columns:1fr; gap:24px; padding:32px 0; }
  :where(html[data-identity]:not([data-identity="legacy"])) h1 { font-size:clamp(2.25rem,8vw,3.5rem); }
  html:is([data-identity="local"],[data-identity="ticket"],[data-identity="table"]) .hero-art { min-height:0; height:200px; margin:0; }
- html:is([data-identity="local"],[data-identity="table"]) .food-photo { width:64%; bottom:-42%; }
- html:is([data-identity="local"],[data-identity="table"]) .art-orbit { width:48px; height:48px; border-width:8px; }
+ html[data-identity="table"] .food-photo { width:64%; bottom:-42%; }
+ html[data-identity="table"] .art-orbit { width:48px; height:48px; border-width:8px; }
  :where(html[data-identity]:not([data-identity="legacy"])) .filters { grid-template-columns:1fr 1fr; }
  :where(html[data-identity]:not([data-identity="legacy"])) footer { padding:24px; }
 }
@@ -130,7 +130,7 @@ html[data-identity="table"] footer { border-top:4px solid var(--field); }
  :where(html[data-identity]:not([data-identity="legacy"])) .filters { grid-template-columns:1fr; }
  html[data-identity="ticket"] .filters { padding:20px; }
  :where(html[data-identity]:not([data-identity="legacy"])) .results-heading { margin-top:24px; }
- html:is([data-identity="local"],[data-identity="table"]) .food-photo { width:88%; bottom:-15%; }
+ html[data-identity="table"] .food-photo { width:88%; bottom:-15%; }
  :where(html[data-identity]:not([data-identity="legacy"])) .footer-brand { width:100%; }
 }
 /* The source offer is the primary action in every card and list template. */

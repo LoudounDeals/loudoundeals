@@ -1,6 +1,10 @@
 # LoudounDeals · Scott Brand System v1.0
 
-The default Local application uses Hearth: warm Canvas, charcoal Ink, olive Ground, clay Field, vermilion Signal, and stone Quiet. `src/brand.css` defines the foundation; `src/themes.css` applies the vision-board components. Local and Table use Field behind their overhead meal photography; every role need not appear on every page.
+## Image ownership policy
+
+Scott requires that LoudounDeals never use copyrighted images it does not own. Do not source imagery from stock libraries, search results, restaurant websites, or other third parties, even when a license permits reuse, unless Scott explicitly changes this policy. Use original project artwork, owner-supplied photographs with confirmed ownership, or imagery generated for this project. Record provenance in the asset register. Generated imagery is not a claim of exclusive copyright ownership; avoid reproducing recognizable third-party artwork, logos, or characters.
+
+The default Local application uses Hearth: warm Canvas, charcoal Ink, olive Ground, clay Field, vermilion Signal, and stone Quiet. `src/brand.css` defines the foundation; `src/themes.css` applies the vision-board components. Local and Table use Field behind their distinct meal photography; every role need not appear on every page.
 
 URL-selected variations are documented in [the template guide](TEMPLATES.md). Local, Ticket, and Table have complete header, hero, filter, card, footer, and favicon treatments; each has a matching Ocean clone using the guide's Tidal palette: sandy Canvas, deep Ink, teal Ground, sea-glass Field, cobalt Signal, and mist Quiet. Earlier `modern`, `modern-list`, `ocean`, and `ocean-list` layouts remain available. All versions share content, typography, and filter behavior. Complete accessibility review remains required.
 
@@ -18,7 +22,7 @@ Run `npm test` and `npm run build`. Before release, check real font rendering, k
 
 Local is the default, including absent, invalid, repeated, and `ui=default` selections. Ticket and Table are alternatives. Their Ocean clones change only the palette, preserving geometry, layout, typography, and behavior. Header symbols are inline SVG with live name text.
 
-Local combines its horizontal pin wordmark and existing pin favicon with Table's photographic meal hero and Field framing. Its offer cards use Quiet surfaces, a Canvas price band, Ground town labels, and a Signal View offer button with white text, stronger type, and a minimum 44 px target. Field rules connect the hero, filters, cards, and footer. Ticket combines its LD mark, burger photograph, Quiet filter band, two-column ticket cards with notched edges, and a restrained footer rule. Table combines its stacked wordmark, a meal framed by Field geometry, three-column Quiet cards, and a Field footer rule. All cards put prices first and retain restrictions and source links. Mobile layouts use one column; meaningful controls remain at least 44 px tall.
+Local combines its horizontal pin wordmark and existing pin favicon with its own generated taco photograph in a Field frame with one sweeping corner. Its offer cards use Quiet surfaces, a Canvas price band, Ground town labels, and a Signal View offer button with white text, stronger type, and a minimum 44 px target. Field rules connect the hero, filters, cards, and footer. Ticket combines its LD mark, burger photograph, Quiet filter band, two-column ticket cards with notched edges, and a restrained footer rule. Table combines its stacked wordmark, a meal framed by Field geometry, three-column Quiet cards, and a Field footer rule. All cards put prices first and retain restrictions and source links. Mobile layouts use one column; meaningful controls remain at least 44 px tall.
 
 The header links target existing sections: Deals, Find a meal, and How we check. The footer repeats the selected symbol. Favicons use separate compact 32-unit SVG drawings with thick features rather than shrinking the header marks; Local is also the static no-JavaScript favicon. Food JPEGs are self-hosted and their [asset provenance](docs/brand/hero-assets.md) is recorded.
 

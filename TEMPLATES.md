@@ -48,7 +48,7 @@ The address is the only source of selection. No cookies, localStorage, or sessio
 
 Same-origin navigation links receive the selected template value while retaining their own query parameters and fragments. Fragment-only links, downloads, restaurant links, maps and the external survey remain unchanged. The site currently has one page; future subpages must include the template script and styles to apply the selection. Links inserted later are handled on activation.
 
-The small head script selects the layout and compact favicon before styles render. With JavaScript disabled, Local and its pin favicon remain available with static listings. Local and Table share an overhead meal photo; Ticket uses a burger photo. Decorative photography is self-hosted and framed with CSS using exact palette tokens.
+The small head script selects the layout and compact favicon before styles render. With JavaScript disabled, Local and its pin favicon remain available with static listings. Local uses its own taco photo in a rounded rectangular frame; Table uses an overhead meal in a circular crop; Ticket uses a burger photo. Decorative photography is self-hosted and framed with CSS using exact palette tokens.
 
 ## Add another template
 
