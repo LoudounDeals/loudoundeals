@@ -34,7 +34,7 @@ The visitor receives static HTML, JavaScript and JSON. There is no application l
 
 | Area | Current evidence | Remaining verification / work |
 | --- | --- | --- |
-| Output encoding / XSS | [Security tests](scripts/security.test.mjs) build hostile deal text and attribute values; verify embedded JSON cannot terminate its script container | Real-browser DOM XSS tests for client rendering, search strings, malformed parameters and optional theme controls |
+| Output encoding / XSS | [Security tests](scripts/security.test.mjs) build hostile deal text and attribute values; verify embedded JSON cannot terminate its script container | Real-browser DOM XSS tests for client rendering, search strings, malformed parameters and URL-selected templates |
 | URL validation | security.test.mjs rejects executable/non-HTTPS source URLs and checks map query isolation | Reject credentials and unsuitable destinations; apply URL validation at all relevant boundaries |
 | Input validation | test.mjs validates dataset, duplicate IDs, dates, prices and filters | Expand malformed types, length limits, optional fields and adversarial inputs |
 | SSRF / outbound requests | [Outbound tests](scripts/outbound.test.mjs) cover exact host approval, HTTPS/port restrictions, private and special-use IPs, all DNS answers, connection address pinning and redirect rejection. [Updater tests](scripts/verify.test.mjs) exercise rejected requests and search-key isolation | CI network egress restrictions, live transport checks and periodic review of special-use IP ranges; see the scoped ASVS evidence below |
@@ -44,7 +44,7 @@ The visitor receives static HTML, JavaScript and JSON. There is no application l
 | Path traversal / errors | Development server checks resolved root boundary and returns generic errors | HTTP tests for encoded traversal, malformed paths, sibling paths and platform differences |
 | Supply chain / CI | No npm dependencies; Pages workflow runs npm test before building | Pin action revisions, review workflow permissions and triggers, secret exposure, repository protections and runtime update policy |
 | Integrity / safe failure | verify.test.mjs checks changed/missing evidence, failed requests and preservation of freshness | Explicit malicious source fixtures, discovery-only quarantine, and reports that do not expose secrets |
-| Privacy / cookies | Static app has no cookie-setting code | Verify live responses and third-party integrations for cookies; URL-only template selector remains unimplemented. No-cookie policy does not imply no localStorage |
+| Privacy / cookies | Static app has no cookie-setting code; URL templates use no browser storage | Verify live responses and third-party integrations for cookies; [Template tests](scripts/templates.test.mjs) cover allowlisting and navigation; verify browser behavior separately |
 | Authentication / sessions / access control / CSRF | No application accounts or state-changing visitor endpoints identified | Provisionally inapplicable to public static app; reassess CI, survey provider and any future APIs separately |
 | Logging / operations | Updater produces review and failure reports | Define report access, retention, alert handling, incident response and vulnerability reporting |
 

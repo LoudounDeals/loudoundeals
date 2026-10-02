@@ -1,0 +1,42 @@
+/* Ocean uses the Brand System v1.0 Tidal palette: sand, sea glass and blue. */
+html:is([data-ui="ocean"],[data-ui="ocean-list"]) {
+  --canvas:#f2f1e9; --ink:#202e32; --ground:#356567; --field:#c7d9d2;
+  --signal:#2456c7; --quiet:#d9dfd9; --muted:#506066; --border:#6c7a7a;
+}
+
+/* Card layouts share structure; the selected palette supplies their identity. */
+html:is([data-ui="modern"],[data-ui="ocean"]) .site { max-width:72rem; }
+html:is([data-ui="modern"],[data-ui="ocean"]) .intro { padding-block:2rem; }
+html:is([data-ui="modern"],[data-ui="ocean"]) .grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+html:is([data-ui="modern"],[data-ui="ocean"]) .deal { border-color:var(--border); }
+html:is([data-ui="modern"],[data-ui="ocean"]) .price { margin-block:1rem; }
+@media(max-width:570px) {
+  html:is([data-ui="modern"],[data-ui="ocean"]) .grid { grid-template-columns:1fr; }
+}
+
+/* List template: readable offer rows with the price alongside the details. */
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .site { max-width:72rem; }
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .intro { grid-template-columns:1fr; padding-block:2rem; }
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .feature { display:none; }
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .grid { grid-template-columns:1fr; gap:1rem; }
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(10rem,14rem);
+  column-gap:2rem;
+  align-items:start;
+}
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal-top { grid-column:1/-1; margin-bottom:1rem; }
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .price {
+  grid-column:2; grid-row:2/6;
+  margin:0; padding-left:1.5rem;
+  border-left:1px solid var(--quiet);
+}
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal h3,
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .restaurant,
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal-location,
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .terms { grid-column:1; }
+html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal-foot { grid-column:1/-1; }
+@media(max-width:700px) {
+  html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .deal { display:flex; }
+  html:is([data-ui="modern-list"],[data-ui="ocean-list"]) .price { margin-bottom:1rem; }
+}

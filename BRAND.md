@@ -2,6 +2,8 @@
 
 The first application uses Hearth: warm Canvas, charcoal Ink, olive Ground, clay Field, vermilion Signal, and stone Quiet. `src/brand.css` maps these roles onto the existing layout. Field is reserved for future artwork; every role need not appear on every page.
 
+URL-selected variations are documented in [the template guide](TEMPLATES.md). `modern` and `modern-list` retain Hearth. `ocean` and `ocean-list` use the guide's Tidal palette: sandy Canvas, deep Ink, teal Ground, sea-glass Field, cobalt Signal, and mist Quiet. Card and list variants share the same content, typography, and interaction framework. The ocean character comes from these approved color relationships; Field remains reserved for future artwork. Tidal's documented contrast pairs apply to the unchanged token values; complete browser accessibility review remains required.
+
 Modernist structure carries the layout. Systems appears in location labels and result counts. Studio is restrained because visitors need to scan deals quickly. Signal marks the introduction and source links; prices remain Ink.
 
 Progressive Depth: the introduction explains the directory, filters answer the immediate need, cards expose terms and sources, and “How we check deals” offers optional detail. Evergreen guidance replaces the hard-coded featured pizza offer so it cannot drift independently of listing data.

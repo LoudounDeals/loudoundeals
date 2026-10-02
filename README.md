@@ -12,6 +12,7 @@ Start with the task you want to do. This README covers everyday work; linked gui
 | Understand tests and security coverage | [Tests and security](#tests-and-security), then [the security guide](SECURITY.md) |
 | Add an offer or review an update | [Daily updates](#daily-updates) and [Content](#content) |
 | Publish or configure hosting | [Hosting and domain](#hosting-and-domain) |
+| Select or add a UI template | [URL-selected templates](TEMPLATES.md) |
 | Understand the brand application | [Brand notes](BRAND.md) |
 
 Documentation follows progressive depth: this README gives practical starting points, and linked guides explain the details. Explain unfamiliar terms, keep instructions direct and label planned work clearly.
@@ -35,11 +36,12 @@ Tests use Node's built-in test runner. A passing run means the implemented check
 | [Deal tests](scripts/test.mjs) | Record validation, filters, expiration and Eastern dates |
 | [Offer verification tests](scripts/verify.test.mjs) | Matching evidence refreshes dates; changed offers, missing evidence and failed requests preserve previous freshness dates |
 | [Security tests](scripts/security.test.mjs) | Unsafe source URL schemes, map URL manipulation, malicious text in generated HTML, embedded JSON escaping and exclusion of internal evidence from a clean build |
+| [Template tests](scripts/templates.test.mjs) | Allowed and hostile URL values, internal navigation, external links and later-added links |
 | [Outbound request tests](scripts/outbound.test.mjs) | Approved hosts, public IP destinations, DNS changes, redirects, TLS settings, download limits, timeouts and safe errors |
 
 Our target is the applicable Level 1 requirements in OWASP ASVS 5.0.0, a standard for checking application security, plus selected Level 2 protections for updater requests. Coverage is still in progress. [The security guide](SECURITY.md) explains the scope, tested protections and remaining work. Its [request safety section](SECURITY.md#updater-request-safety) describes the download limits; [the ASVS evidence](SECURITY.md#asvs-evidence-for-this-pass) maps tested cases to specific requirements.
 
-The project's direction is a no-cookie policy. The application contains no cookie-setting code; production responses and external services still need verification. Review future analytics, embeds and integrations against that goal. The proposed URL-based template selector is not yet implemented.
+The project's direction is a no-cookie policy. The application contains no cookie-setting code; production responses and external services still need verification. Review future analytics, embeds and integrations against that goal. URL-selected templates are implemented without browser storage. Use `?ui=modern` to opt in; see [template instructions](TEMPLATES.md).
 
 ## Daily updates
 

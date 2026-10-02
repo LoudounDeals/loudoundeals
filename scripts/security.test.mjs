@@ -31,7 +31,7 @@ test('production build escapes hostile text and attributes, protects embedded JS
   try {
     for (const dir of ['src', 'scripts', 'data']) await mkdir(join(root, dir));
     for (const file of ['build.mjs', 'model.mjs']) await copyFile(new URL(file, import.meta.url), join(root, 'scripts', file));
-    for (const file of ['index.html', 'app.mjs', 'style.css', 'brand.css', 'fonts.css', 'fonts']) await cp(new URL('../src/' + file, import.meta.url), join(root, 'src', file), {recursive: true});
+    for (const file of ['index.html', 'app.mjs', 'style.css', 'brand.css', 'fonts.css', 'templates.js', 'templates.css', 'fonts']) await cp(new URL('../src/' + file, import.meta.url), join(root, 'src', file), {recursive: true});
     const data = structuredClone(source);
     data.deals = [data.deals[0]];
     const deal = data.deals[0];
@@ -57,7 +57,7 @@ test('production build escapes hostile text and attributes, protects embedded JS
     const publicData = await readFile(join(root, 'dist', 'deals.json'), 'utf8');
     assert(!publicData.includes('INTERNAL_EVIDENCE_SENTINEL'));
     assert(!html.includes('INTERNAL_EVIDENCE_SENTINEL'));
-    assert.deepEqual((await readdir(join(root, 'dist'))).sort(), ['app.mjs', 'brand.css', 'deals.json', 'fonts', 'fonts.css', 'index.html', 'model.mjs', 'style.css']);
+    assert.deepEqual((await readdir(join(root, 'dist'))).sort(), ['app.mjs', 'brand.css', 'deals.json', 'fonts', 'fonts.css', 'index.html', 'model.mjs', 'style.css', 'templates.css', 'templates.js']);
   } finally {
     await rm(root, {recursive: true, force: true});
   }
