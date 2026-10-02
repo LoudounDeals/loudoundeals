@@ -2,9 +2,44 @@
 
 A dependency-free static meal-deal directory. The public site consists only of HTML, CSS, JavaScript and JSON in `dist/`. No runtime database, API server, or visitor tracking.
 
+## Find what you need
+
+Start with the task you want to do. This README covers everyday work; linked guides provide detail.
+
+| Task | Read |
+| --- | --- |
+| Run or edit the site | [Local development](#local-development) |
+| Understand tests and security coverage | [Tests and security](#tests-and-security), then [the security guide](SECURITY.md) |
+| Add an offer or review an update | [Daily updates](#daily-updates) and [Content](#content) |
+| Publish or configure hosting | [Hosting and domain](#hosting-and-domain) |
+| Understand the brand application | [Brand notes](BRAND.md) |
+
+Documentation follows progressive depth: this README gives practical starting points, and linked guides explain the details. Explain unfamiliar terms, keep instructions direct and label planned work clearly.
+
 ## Local development
 
 Requires Node 24. Run `npm run build`, `npm test`, then `npm run dev`. Open http://127.0.0.1:4173. Edit presentation in `src/`, approved records in `data/deals.json`. Build embeds offers for no-JavaScript browsing and generates public `dist/deals.json` without internal evidence fields. Today is calculated in America/New_York; it means scheduled today, not open right now. Share filters by copying the current URL.
+
+## Tests and security
+
+From this project directory, run:
+
+```sh
+npm test
+```
+
+Tests use Node's built-in test runner. A passing run means the implemented checks passed; browser behavior and production hosting still need separate checks. The deployment workflow runs this command before building the site.
+
+| Test file | What it checks |
+| --- | --- |
+| [Deal tests](scripts/test.mjs) | Record validation, filters, expiration and Eastern dates |
+| [Offer verification tests](scripts/verify.test.mjs) | Matching evidence refreshes dates; changed offers, missing evidence and failed requests preserve previous freshness dates |
+| [Security tests](scripts/security.test.mjs) | Unsafe source URL schemes, map URL manipulation, malicious text in generated HTML, embedded JSON escaping and exclusion of internal evidence from a clean build |
+| [Outbound request tests](scripts/outbound.test.mjs) | Approved hosts, public IP destinations, DNS changes, redirects, TLS settings, download limits, timeouts and safe errors |
+
+Our target is the applicable Level 1 requirements in OWASP ASVS 5.0.0, a standard for checking application security, plus selected Level 2 protections for updater requests. Coverage is still in progress. [The security guide](SECURITY.md) explains the scope, tested protections and remaining work. Its [request safety section](SECURITY.md#updater-request-safety) describes the download limits; [the ASVS evidence](SECURITY.md#asvs-evidence-for-this-pass) maps tested cases to specific requirements.
+
+The project's direction is a no-cookie policy. The application contains no cookie-setting code; production responses and external services still need verification. Review future analytics, embeds and integrations against that goal. The proposed URL-based template selector is not yet implemented.
 
 ## Daily updates
 
@@ -35,6 +70,8 @@ Whole-page baselines and `--approve-baselines` are no longer used. Offer-specifi
 To add or revise an offer, review the full source terms, then add exact source excerpts to its `data/verification.json` entry. Include the item and price together, its applicable days/hours, quantities and restrictions; a generic heading or price alone is insufficient. Set `reviewedAt` and `listingFingerprint` using the exported `listingFingerprint(deal)` function in `scripts/verify.mjs`. This fingerprint describes our listing, not the remote page: changes to our price, schedule, source or terms invalidate the old rules until reviewed again. Do not regenerate fingerprints in the daily workflow. Internal rules are not included in the public site. Listings older than 14 days display a recheck label. Explicit expired or withdrawn offers are excluded. Run tests/build before publishing reviewed changes.
 
 The Pages workflow deploys after a successful daily update, on pushes to `main`, or when manually dispatched. The explicit daily-workflow completion trigger is needed because commits made with `GITHUB_TOKEN` do not trigger another push workflow.
+
+Restaurant downloads require an exact hostname in [the approved source list](data/source-hosts.json). New hosts require review; discovered links are saved as leads and never added automatically. Redirects are rejected, so a moved page needs its final source URL and verification rules reviewed. Failed requests preserve that source's previous freshness dates. Follow [the source review procedure](SECURITY.md#reviewing-a-new-or-moved-source) before changing the list.
 
 ## Hosting and domain
 

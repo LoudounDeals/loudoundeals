@@ -1,1 +1,1 @@
-{"name":"loudoundeals","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node --test scripts/test.mjs scripts/verify.test.mjs","dev":"node scripts/serve.mjs","update":"node scripts/update.mjs"}}
+{"name":"loudoundeals","private":true,"type":"module","scripts":{"build":"node scripts/build.mjs","test":"node --test scripts/test.mjs scripts/verify.test.mjs scripts/security.test.mjs scripts/outbound.test.mjs","dev":"node scripts/serve.mjs","update":"node scripts/update.mjs"}}

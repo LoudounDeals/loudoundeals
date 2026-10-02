@@ -61,24 +61,68 @@ test('updater saves verified dates and timestamp; failed/unsupported fetches pre
   try {
     await mkdir(join(root, 'scripts'));
     await mkdir(join(root, 'data'));
-    for (const file of ['update.mjs', 'model.mjs', 'verify.mjs']) await copyFile(new URL(file, import.meta.url), join(root, 'scripts', file));
+    for (const file of ['update.mjs', 'model.mjs', 'verify.mjs', 'outbound.mjs']) await copyFile(new URL(file, import.meta.url), join(root, 'scripts', file));
+    await writeFile(join(root, 'data', 'source-hosts.json'), JSON.stringify([new URL(deal.sourceUrl).hostname]));
     await writeFile(join(root, 'data', 'verification.json'), JSON.stringify({[deal.id]: rule}));
     const original = {updatedAt: '2026-09-24T00:00:00Z', deals: [deal]};
     const body = '<html>' + 'Unrelated restaurant information. '.repeat(10) + details.replace('$9.99', '&#36;9.99') + '</html>';
-    for (const scenario of ['valid', 'changed', 'http', 'pdf', 'blocked', 'network']) {
+    for (const scenario of ['valid', 'changed', 'http', 'pdf', 'blocked', 'network', 'redirect', 'private', 'oversized', 'discovery-valid', 'discovery-redirect', 'discovery-oversized', 'discovery-invalid']) {
       await writeFile(join(root, 'data', 'deals.json'), JSON.stringify(original));
       const mock = join(root, 'mock.mjs');
-      const options = scenario === 'http' ? {status: 403, headers: {'Content-Type': 'text/html'}} : {headers: {'Content-Type': scenario === 'pdf' ? 'application/pdf' : 'text/html'}};
+      const status = scenario === 'http' ? 403 : scenario === 'redirect' ? 302 : 200;
+      const headers = {'content-type': scenario === 'pdf' ? 'application/pdf' : 'text/html'};
+      if (scenario === 'redirect') headers.location = 'https://127.0.0.1/admin';
+      if (scenario === 'oversized') headers['content-length'] = '3000001';
       const html = scenario === 'changed' ? body.replace('Limit two pizzas', 'Limit one pizza') : scenario === 'blocked' ? 'Access denied' : body;
-      await writeFile(mock, scenario === 'network' ? 'globalThis.fetch = async () => { throw Error("Network unavailable"); };' : `globalThis.fetch = async () => new Response(${JSON.stringify(html)}, ${JSON.stringify(options)});`);
-      const result = spawnSync(process.execPath, ['--import', pathToFileURL(mock).href, 'scripts/update.mjs'], {cwd: root, env: {...process.env, BRAVE_SEARCH_API_KEY: '', NODE_OPTIONS: ''}, encoding: 'utf8'});
-      assert.equal(result.status, ['valid', 'changed'].includes(scenario) ? 0 : 1, result.stderr);
+      await writeFile(mock, `
+        import https from 'node:https';
+        import dns from 'node:dns/promises';
+        import {EventEmitter} from 'node:events';
+        import {PassThrough} from 'node:stream';
+        import {writeFileSync} from 'node:fs';
+        const calls = [];
+        dns.lookup = async () => [{address: ${JSON.stringify(scenario === 'private' ? '127.0.0.1' : '93.184.216.34')}, family: 4}];
+        https.request = (url, options, callback) => {
+          calls.push({host: url.hostname, hasToken: !!options.headers['X-Subscription-Token']});
+          writeFileSync('requests.json', JSON.stringify(calls));
+          const req = new EventEmitter();
+          req.destroy = () => {};
+          req.end = () => queueMicrotask(() => {
+            if (${JSON.stringify(scenario)} === 'network') {req.emit('error', Error('Network unavailable')); return;}
+            const res = new PassThrough();
+            res.statusCode = ${status}; res.headers = ${JSON.stringify(headers)}; res.complete = true;
+            let responseBody = ${JSON.stringify(html)};
+            if (url.hostname === 'api.search.brave.com') {
+              res.headers = {'content-type': 'application/json'};
+              responseBody = JSON.stringify({web: {results: [{title: 'Candidate', url: 'https://candidate.example/specials'}]}});
+              if (${JSON.stringify(scenario)} === 'discovery-redirect') {res.statusCode = 302; res.headers.location = 'https://evil.example';}
+              if (${JSON.stringify(scenario)} === 'discovery-oversized') res.headers['content-length'] = '1000001';
+              if (${JSON.stringify(scenario)} === 'discovery-invalid') responseBody = 'INVALID SECRET_SENTINEL';
+            }
+            callback(res);
+            if (!res.destroyed) res.end(responseBody);
+          });
+          return req;
+        };
+      `);
+      const discovery = scenario.startsWith('discovery-');
+      const result = spawnSync(process.execPath, ['--import', pathToFileURL(mock).href, 'scripts/update.mjs'], {cwd: root, env: {...process.env, BRAVE_SEARCH_API_KEY: discovery ? 'SECRET_SENTINEL' : '', NODE_OPTIONS: ''}, encoding: 'utf8'});
+      assert.equal(result.status, ['valid', 'changed'].includes(scenario) || discovery ? 0 : 1, result.stderr);
       const saved = JSON.parse(await readFile(join(root, 'data', 'deals.json'), 'utf8'));
       const report = JSON.parse(await readFile(join(root, 'reports', 'latest.json'), 'utf8'));
-      if (scenario === 'valid') {
+      if (scenario === 'valid' || discovery) {
         assert.notEqual(saved.deals[0].lastChecked, deal.lastChecked);
         assert.notEqual(saved.updatedAt, original.updatedAt);
         assert.deepEqual(report.checked, [deal.id]);
+        if (discovery) {
+          const calls = JSON.parse(await readFile(join(root, 'requests.json'), 'utf8'));
+          assert.deepEqual(calls, [{host: new URL(deal.sourceUrl).hostname, hasToken: false}, {host: 'api.search.brave.com', hasToken: true}]);
+          assert.equal(report.candidates.length, scenario === 'discovery-valid' ? 1 : 0);
+          assert.equal(report.failures.length, scenario === 'discovery-valid' ? 0 : 1);
+          assert(!JSON.stringify(report).includes('SECRET_SENTINEL'));
+          assert(!result.stdout.includes('SECRET_SENTINEL'));
+          assert(!result.stderr.includes('SECRET_SENTINEL'));
+        }
       } else {
         assert.deepEqual(saved, original);
         assert.equal(report.checked.length, 0);
