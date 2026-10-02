@@ -12,29 +12,29 @@ const offer = (overrides = {}) => ({...structuredClone(source.deals[0]),
   days: [1, 5], category: 'happy', categories: ['happy', 'burger'],
   terms: 'Dine-in only.', ...overrides});
 const ids = (deals, state) => filterDeals(deals, state).map(d => d.id);
-const pending = {todo: 'Known QA issue; enable as a blocking regression with the corresponding fix'};
 
-test('QA 1: accents and apostrophe variants return identical matches', pending, () => {
+
+test('QA 1: accents and apostrophe variants return identical matches', () => {
   const deals = [offer()];
   for (const query of ["Nick's Senor Cafe", 'Nick’s Señor Café', 'Nicks Senor Cafe']) {
     assert.deepEqual(ids(deals, {query}), ['qa-offer'], query);
   }
 });
 
-test('QA 4: surrounding and repeated query whitespace is ignored', pending, () => {
+test('QA 4: surrounding and repeated query whitespace is ignored', () => {
   for (const query of ['  Burger  ', 'Burger   & fries', '   ']) {
     assert.deepEqual(ids([offer()], {query}), ['qa-offer'], query);
   }
 });
 
-test('QA 7: visible addresses and ZIP codes participate in combined searches', pending, () => {
+test('QA 7: visible addresses and ZIP codes participate in combined searches', () => {
   const deals = [offer(), offer({id: 'other', town: 'Leesburg', days: [2]})];
   for (const query of ['Ryan Road', '20148']) {
     assert.deepEqual(ids(deals, {query, town: 'Brambleton', day: 5}), ['qa-offer']);
   }
 });
 
-test('QA 2: food and promotion tags overlap without duplicate results', pending, () => {
+test('QA 2: food and promotion tags overlap without duplicate results', () => {
   const deals = [offer(), offer({id: 'combo', category: 'family', categories: ['family', 'wings']})];
   assert.deepEqual(ids(deals, {kind: 'happy'}), ['qa-offer']);
   assert.deepEqual(ids(deals, {kind: 'burger'}), ['qa-offer']);
@@ -43,16 +43,16 @@ test('QA 2: food and promotion tags overlap without duplicate results', pending,
   assert.equal(new Set(ids(deals, {kind: 'all'})).size, 2);
 });
 
-test('QA 3: Ashburn includes its neighborhoods while narrow selections stay precise', pending, () => {
+test('QA 3: Ashburn includes its neighborhoods while narrow selections stay precise', () => {
   const deals = ['Ashburn', 'Brambleton', 'Broadlands', 'Leesburg'].map((town, i) => offer({id: 'place-' + i, town}));
   assert.deepEqual(ids(deals, {town: 'Ashburn'}), ['place-0', 'place-1', 'place-2']);
   assert.deepEqual(ids(deals, {town: 'Brambleton'}), ['place-1']);
   assert.deepEqual(ids(deals, {town: 'Broadlands'}), ['place-2']);
 });
 
-test('QA 5: an unchanged-day timer tick does not replace result elements', pending, async () => {
+test('QA 5: an unchanged-day timer tick does not replace result elements', async () => {
   const app = (await readFile('src/app.mjs', 'utf8')).replace(/^import[^;]+;/, '');
-  let writes = 0, tick;
+  let writes = 0, tick, date = '2026-10-02';
   const elements = Object.fromEntries(['day', 'town', 'kind', 'query'].map(name => [name, {
     value: {day: 'today', town: 'all', kind: 'all', query: ''}[name],
     tagName: name === 'query' ? 'INPUT' : 'SELECT', selectedIndex: 0, options: [{}]
@@ -66,15 +66,28 @@ test('QA 5: an unchanged-day timer tick does not replace result elements', pendi
     URLSearchParams, location: {search: '', pathname: '/', hash: ''},
     document: {getElementById(id) { return nodes[id] ??= {addEventListener() {}}; }},
     history: {replaceState() {}}, filterDeals: () => [], activeDeals: () => [],
-    easternDate: () => '2026-10-02', setInterval(fn) { tick = fn; }
+    easternDate: () => date, setInterval(fn) { tick = fn; }
   });
   const initialWrites = writes;
   assert.equal(typeof tick, 'function');
   tick(); tick();
   assert.equal(writes, initialWrites, 'Replacing innerHTML removes focused result nodes');
+  date = '2026-10-03';
+  tick();
+  assert.equal(writes, initialWrites + 1, 'A new Eastern date refreshes expiration and schedules');
+  tick();
+  assert.equal(writes, initialWrites + 1, 'Subsequent same-day ticks leave results alone');
 });
 
-test('QA 9 follow-up: multi-category records reject invalid tags', pending, () => {
+test('published tags retain primary categories and include reviewed overlapping meals', () => {
+  for (const deal of source.deals) assert(deal.categories.includes(deal.category), deal.id);
+  for (const [id, tag] of [['ksob-burger','burger'], ['lph-tacos','tacos'], ['lph-wings','wings'],
+    ['broadlands-pizza-wings','wings'], ['nicks-tacos','tacos'], ['nicks-wings','wings'], ['nicks-burger','burger']]) {
+    assert(source.deals.find(d => d.id === id).categories.includes(tag), id);
+  }
+});
+
+test('QA 9 follow-up: multi-category records reject invalid tags', () => {
   for (const categories of [[], ['unknown'], 'burger']) {
     assert.throws(() => validate({...source, deals: [offer({categories})]}));
   }

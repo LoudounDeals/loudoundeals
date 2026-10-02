@@ -85,6 +85,6 @@ The site also works on any static HTTP host. Serve `.mjs` as JavaScript (`text/j
 
 ## Content
 
-See [test coverage and release checks](TESTING.md) for automated QA regressions, known pending cases, and the manual browser/source-review checklist. Pending tests do not indicate that the corresponding issue has been fixed.
+See [test coverage and release checks](TESTING.md) for blocking QA regressions and the manual browser/source-review checklist. Search ignores accents, apostrophes and whitespace differences and includes addresses. Deals can belong to multiple food/promotion categories. Ashburn includes Broadlands and Brambleton; narrower neighborhood filters remain available. Timer updates run only when the Eastern date changes and restore result-link focus when possible.
 
 Initial offers were researched on restaurant websites September 24, 2026. A website check is not restaurant confirmation. Conditional free offers and percentage discounts are excluded from numeric budget filtering. Prices exclude tax and tip.

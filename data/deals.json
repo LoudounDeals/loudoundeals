@@ -22,7 +22,10 @@
         "$9.99",
         "Two Pizza limit"
       ],
-      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147"
+      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147",
+      "categories": [
+        "family"
+      ]
     },
     {
       "id": "ksob-burger",
@@ -52,7 +55,11 @@
         "HH CHOP HOUSE BURGER",
         "fresh ground chuck, ham, bbq sauce, cheddar cheese, lettuce, tomato, fries"
       ],
-      "address": "12 South King St, Leesburg, VA"
+      "address": "12 South King St, Leesburg, VA",
+      "categories": [
+        "happy",
+        "burger"
+      ]
     },
     {
       "id": "resq-burger",
@@ -74,7 +81,10 @@
         "every Tuesday",
         "half-priced Pitmaster Burgers"
       ],
-      "address": "528B East Market Street, Leesburg, VA 20176"
+      "address": "528B East Market Street, Leesburg, VA 20176",
+      "categories": [
+        "burger"
+      ]
     },
     {
       "id": "saahil-kids",
@@ -97,7 +107,10 @@
         "13 and under",
         "dine-in"
       ],
-      "address": "22000 Dulles Retail Plaza, Suite 102, Sterling, VA 20166"
+      "address": "22000 Dulles Retail Plaza, Suite 102, Sterling, VA 20166",
+      "categories": [
+        "family"
+      ]
     },
     {
       "id": "omalleys-bites",
@@ -128,7 +141,10 @@
         "$7",
         "Available Daily from 3"
       ],
-      "address": "45425 Holiday Drive, Sterling, VA 20166"
+      "address": "45425 Holiday Drive, Sterling, VA 20166",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "id": "branch-wings",
@@ -150,7 +166,10 @@
         "8 Wings $8",
         "Wednesday"
       ],
-      "address": "49 Catoctin Cir SE, Leesburg, VA 20175"
+      "address": "49 Catoctin Cir SE, Leesburg, VA 20175",
+      "categories": [
+        "wings"
+      ]
     },
     {
       "id": "omalleys-tacos",
@@ -175,7 +194,10 @@
         "3 pm to 11 pm"
       ],
       "reviewNote": "Old weekly-specials page superseded. Taco offer not confirmed on current menu; excluded from public listings.",
-      "address": "45425 Holiday Drive, Sterling, VA 20166"
+      "address": "45425 Holiday Drive, Sterling, VA 20166",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "id": "andolinis-saturday",
@@ -197,7 +219,10 @@
         "15% off",
         "SATURDAY"
       ],
-      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147"
+      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147",
+      "categories": [
+        "family"
+      ]
     },
     {
       "id": "branch-tacos",
@@ -219,7 +244,10 @@
         "Taco Tuesday",
         "$4 Tacos"
       ],
-      "address": "49 Catoctin Cir SE, Leesburg, VA 20175"
+      "address": "49 Catoctin Cir SE, Leesburg, VA 20175",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -242,7 +270,10 @@
         "$27"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -264,7 +295,10 @@
         "2 for $8"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -287,7 +321,10 @@
         "$27"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "wings"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -310,7 +347,10 @@
         "$23"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -337,7 +377,11 @@
         "10"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy",
+        "tacos"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -364,7 +408,10 @@
         "10"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -391,7 +438,10 @@
         "8"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -418,7 +468,11 @@
         "9"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy",
+        "wings"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -445,7 +499,10 @@
         "9"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -472,7 +529,10 @@
         "10"
       ],
       "lastChecked": "2026-09-24",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -499,7 +559,10 @@
         "11"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Black Hog BBQ",
@@ -521,7 +584,10 @@
         "$25"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Black Hog BBQ",
@@ -543,7 +609,10 @@
         "8 Wings"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "wings"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -572,7 +641,10 @@
         "2pm-5pm"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -594,7 +666,10 @@
         "$10"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -623,7 +698,10 @@
         "2pm-5pm"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -645,7 +723,10 @@
         "$10"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Parallel Wine & Whiskey Bar",
@@ -675,7 +756,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "16:00"
+      "end": "16:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Parallel Wine & Whiskey Bar",
@@ -705,7 +789,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "16:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -732,7 +819,10 @@
         "27.99"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -759,7 +849,11 @@
         "23.99"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family",
+        "wings"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -786,7 +880,10 @@
         "2.00 off each"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -813,7 +910,10 @@
         "$25 order"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -835,7 +935,10 @@
         "9.99"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -857,7 +960,10 @@
         "60+"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -879,7 +985,10 @@
         "WEDNESDAYS"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -907,7 +1016,10 @@
         "27.99"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -934,7 +1046,10 @@
         "50 % Off Pasta"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -961,7 +1076,10 @@
         "3OFF"
       ],
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -990,7 +1108,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -1019,7 +1140,11 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy",
+        "tacos"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -1048,7 +1173,11 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy",
+        "wings"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -1077,7 +1206,11 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy",
+        "burger"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -1106,7 +1239,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -1135,7 +1271,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -1164,7 +1303,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -1193,7 +1335,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "The Branch",
@@ -1215,7 +1360,10 @@
         "$10 Burgers"
       ],
       "lastChecked": "2026-09-24",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "burger"
+      ]
     },
     {
       "restaurant": "The Branch",
@@ -1242,7 +1390,10 @@
         "½ OFF"
       ],
       "lastChecked": "2026-09-24",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     }
   ]
 }

@@ -17,7 +17,10 @@
       "sourceUrl": "https://andolinis-pizza.com/specials/",
       "lastChecked": "2026-10-02",
       "status": "active",
-      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147"
+      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147",
+      "categories": [
+        "family"
+      ]
     },
     {
       "id": "ksob-burger",
@@ -43,7 +46,11 @@
       "sourceUrl": "https://kingstreetoysterbar.com/menu/king-street-oyster-bar-leesburg-12-south-king-st",
       "lastChecked": "2026-09-24",
       "status": "active",
-      "address": "12 South King St, Leesburg, VA"
+      "address": "12 South King St, Leesburg, VA",
+      "categories": [
+        "happy",
+        "burger"
+      ]
     },
     {
       "id": "resq-burger",
@@ -61,7 +68,10 @@
       "sourceUrl": "https://resq-bbq.com/",
       "lastChecked": "2026-10-01",
       "status": "active",
-      "address": "528B East Market Street, Leesburg, VA 20176"
+      "address": "528B East Market Street, Leesburg, VA 20176",
+      "categories": [
+        "burger"
+      ]
     },
     {
       "id": "saahil-kids",
@@ -79,7 +89,10 @@
       "sourceUrl": "https://saahilrestaurant.com/kids-eat-free-tuesdays",
       "lastChecked": "2026-10-02",
       "status": "active",
-      "address": "22000 Dulles Retail Plaza, Suite 102, Sterling, VA 20166"
+      "address": "22000 Dulles Retail Plaza, Suite 102, Sterling, VA 20166",
+      "categories": [
+        "family"
+      ]
     },
     {
       "id": "omalleys-bites",
@@ -105,7 +118,10 @@
       "sourceUrl": "https://www.omalleyssterling.com/menus/",
       "lastChecked": "2026-09-24",
       "status": "active",
-      "address": "45425 Holiday Drive, Sterling, VA 20166"
+      "address": "45425 Holiday Drive, Sterling, VA 20166",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "id": "branch-wings",
@@ -123,7 +139,10 @@
       "sourceUrl": "https://bowlthebranch.com/restaurant-bar/daily-specials/",
       "lastChecked": "2026-09-24",
       "status": "active",
-      "address": "49 Catoctin Cir SE, Leesburg, VA 20175"
+      "address": "49 Catoctin Cir SE, Leesburg, VA 20175",
+      "categories": [
+        "wings"
+      ]
     },
     {
       "id": "andolinis-saturday",
@@ -141,7 +160,10 @@
       "sourceUrl": "https://andolinis-pizza.com/specials/",
       "lastChecked": "2026-10-02",
       "status": "active",
-      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147"
+      "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147",
+      "categories": [
+        "family"
+      ]
     },
     {
       "id": "branch-tacos",
@@ -159,7 +181,10 @@
       "sourceUrl": "https://bowlthebranch.com/restaurant-bar/daily-specials/",
       "lastChecked": "2026-09-24",
       "status": "active",
-      "address": "49 Catoctin Cir SE, Leesburg, VA 20175"
+      "address": "49 Catoctin Cir SE, Leesburg, VA 20175",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -177,7 +202,10 @@
       "timeLabel": "Mondays",
       "terms": "Weekly special. Serving hours and refill restrictions are not published; confirm before ordering.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -195,7 +223,10 @@
       "timeLabel": "Tuesdays",
       "terms": "Three tacos are also available for $10. Serving hours are not published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -213,7 +244,10 @@
       "timeLabel": "Wednesdays",
       "terms": "Weekly special. Serving hours and refill restrictions are not published; confirm before ordering.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "wings"
+      ]
     },
     {
       "restaurant": "Velocity Bar & Kitchen",
@@ -231,7 +265,10 @@
       "timeLabel": "Thursdays",
       "terms": "Weekly surf-and-turf special. Serving hours are not published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -254,7 +291,11 @@
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Two tacos per order. Happy-hour menu only; no Saturday offer listed.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy",
+        "tacos"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -277,7 +318,10 @@
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Appetizer portion. Happy-hour menu only; no Saturday offer listed.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -300,7 +344,10 @@
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Cheese dip with tortilla chips. Happy-hour menu only; no Saturday offer listed.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -323,7 +370,11 @@
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Wing count is not specified. Happy-hour menu only; no Saturday offer listed.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy",
+        "wings"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -346,7 +397,10 @@
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Includes house-cut fries. Happy-hour menu only; no Saturday offer listed.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -369,7 +423,10 @@
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Choice of dipping sauce. Happy-hour menu only; no Saturday offer listed.",
       "lastChecked": "2026-09-24",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Leesburg Public House",
@@ -392,7 +449,10 @@
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Served with slaw. Happy-hour menu only; no Saturday offer listed.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Black Hog BBQ",
@@ -410,7 +470,10 @@
       "timeLabel": "Tuesdays",
       "terms": "Includes one side. Specials say 10 a.m.–close, but location hours say 11 a.m. opening; confirm serving time.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Black Hog BBQ",
@@ -428,7 +491,10 @@
       "timeLabel": "Tuesdays",
       "terms": "Eight wings per order. Specials say 10 a.m.–close, but location hours say 11 a.m. opening; confirm serving time.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "wings"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -452,7 +518,10 @@
       "timeLabel": "Mon–Thu 2–6 p.m. · Fri–Sun 2–5 p.m.",
       "terms": "Traditional tacos only. The same two-taco offer is also advertised for Taco Tuesday.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -470,7 +539,10 @@
       "timeLabel": "Tuesdays",
       "terms": "Tuesday combination includes a soft drink. Specific serving hours are not published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -494,7 +566,10 @@
       "timeLabel": "Mon–Thu 2–6 p.m. · Fri–Sun 2–5 p.m.",
       "terms": "Traditional tacos only. The same two-taco offer is also advertised for Taco Tuesday.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Señor Ramon Taqueria",
@@ -512,7 +587,10 @@
       "timeLabel": "Tuesdays",
       "terms": "Tuesday combination includes a soft drink. Specific serving hours are not published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "tacos"
+      ]
     },
     {
       "restaurant": "Parallel Wine & Whiskey Bar",
@@ -538,7 +616,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "16:00"
+      "end": "16:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Parallel Wine & Whiskey Bar",
@@ -564,7 +645,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "16:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -588,7 +672,10 @@
       "timeLabel": "Daily website offer",
       "terms": "Two large pizzas, one topping each. No day restriction or expiration is published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -612,7 +699,11 @@
       "timeLabel": "Daily website offer",
       "terms": "One large pizza with one topping and ten wings. No day restriction or expiration is published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family",
+        "wings"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -636,7 +727,10 @@
       "timeLabel": "Daily website offer",
       "terms": "Buy two extra-large pizzas; save $2 on each. Final order price depends on your selection.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Broadlands Brickoven Pizzeria",
@@ -660,7 +754,10 @@
       "timeLabel": "Daily website offer",
       "terms": "Requires a $25 order. Quantity of complimentary knots is not specified.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -678,7 +775,10 @@
       "timeLabel": "Mondays",
       "terms": "Dine-in or pickup; no delivery. One per customer, party and family. Mention coupon; cannot combine offers.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -696,7 +796,10 @@
       "timeLabel": "Tuesdays · Age 60+",
       "terms": "Age 60 or older; dine-in or pickup, no delivery. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -714,7 +817,10 @@
       "timeLabel": "Wednesdays · Dine-in",
       "terms": "Buy an adult entrée or pasta; one free kids-menu meal per family, order and transaction. No pickup or delivery. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -738,7 +844,10 @@
       "timeLabel": "Daily coupon offer",
       "terms": "Extra toppings cost regular price. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -762,7 +871,10 @@
       "timeLabel": "Daily coupon offer",
       "terms": "Buy an entrée or pasta; second must cost the same or less. Dine-in or pickup. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Scotto’s Rigatoni Grill",
@@ -786,7 +898,10 @@
       "timeLabel": "Daily · App only",
       "terms": "Apply code 3OFF in the app; limit one pizza. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
       "lastChecked": "2026-10-02",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "family"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -810,7 +925,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -834,7 +952,11 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy",
+        "tacos"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -858,7 +980,11 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy",
+        "wings"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -882,7 +1008,11 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy",
+        "burger"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -906,7 +1036,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -930,7 +1063,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -954,7 +1090,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "Nick’s Taverna",
@@ -978,7 +1117,10 @@
       "lastChecked": "2026-10-02",
       "status": "active",
       "start": "15:00",
-      "end": "18:00"
+      "end": "18:00",
+      "categories": [
+        "happy"
+      ]
     },
     {
       "restaurant": "The Branch",
@@ -996,7 +1138,10 @@
       "timeLabel": "Mondays",
       "terms": "Burger price only; bowling and pitchers are separate specials. Serving hours are not published.",
       "lastChecked": "2026-09-24",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "burger"
+      ]
     },
     {
       "restaurant": "The Branch",
@@ -1019,7 +1164,10 @@
       "timeLabel": "Mon–Thu 4–6 p.m. · Fri 3–6 p.m. · Fri–Sat 10–11:45 p.m.",
       "terms": "Selected snacks only, including pretzel, fries, nachos and vegetable platter. Saturday offer is late-night only.",
       "lastChecked": "2026-09-24",
-      "status": "active"
+      "status": "active",
+      "categories": [
+        "happy"
+      ]
     }
   ]
 }
