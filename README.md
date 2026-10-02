@@ -85,4 +85,6 @@ The site also works on any static HTTP host. Serve `.mjs` as JavaScript (`text/j
 
 ## Content
 
+See [test coverage and release checks](TESTING.md) for automated QA regressions, known pending cases, and the manual browser/source-review checklist. Pending tests do not indicate that the corresponding issue has been fixed.
+
 Initial offers were researched on restaurant websites September 24, 2026. A website check is not restaurant confirmation. Conditional free offers and percentage discounts are excluded from numeric budget filtering. Prices exclude tax and tip.
