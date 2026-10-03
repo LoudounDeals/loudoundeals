@@ -1,4 +1,4 @@
-import{filterDeals,activeDeals,easternDate,googleMapsUrl}from'./model.mjs?v=bdb91c4e333f';
+import{filterDeals,activeDeals,easternDate,googleMapsUrl}from'./model.mjs?v=2aef1dac8e94';
 const data=JSON.parse(document.getElementById('deal-data').textContent),form=document.getElementById('filters'),results=document.getElementById('results');const names=['day','town','kind','query'];const params=new URLSearchParams(location.search);for(const key of names){const el=form.elements[key];if(params.has(key))el.value=params.get(key);if(el.tagName==='SELECT'&&el.selectedIndex<0)el.selectedIndex=0;}
 const esc=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 let lastRenderedDate;
