@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-04T16:44:02.699Z",
+  "updatedAt": "2026-10-05T10:31:44.263Z",
   "deals": [
     {
       "id": "andolinis-monday-pizza",
@@ -15,7 +15,7 @@
       "timeLabel": "Mondays",
       "terms": "Mention the coupon. Limit two pizzas. Cannot combine offers. One topping available for $10.99.",
       "sourceUrl": "https://andolinis-pizza.com/specials/",
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "evidence": [
         "Monday Madness",
@@ -100,7 +100,7 @@
       "timeLabel": "Tuesdays · Dine-in",
       "terms": "Buy two qualifying regular-menu entrées. One free kids’ meal per table, age 13 or under. Cannot combine discounts.",
       "sourceUrl": "https://saahilrestaurant.com/kids-eat-free-tuesdays",
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "evidence": [
         "two entrées",
@@ -213,7 +213,7 @@
       "timeLabel": "Saturdays · Online orders",
       "terms": "Use promo code SATURDAY. Cannot combine with other offers.",
       "sourceUrl": "https://andolinis-pizza.com/specials/",
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "evidence": [
         "15% off",
@@ -269,7 +269,7 @@
         "Ribs",
         "$27"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -294,7 +294,7 @@
         "TUESDAY",
         "2 for $8"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "tacos"
@@ -320,7 +320,7 @@
         "Wings",
         "$27"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "wings"
@@ -346,7 +346,7 @@
         "Ribeye",
         "$23"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -376,7 +376,7 @@
         "Happy Hour",
         "10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "happy",
@@ -407,7 +407,7 @@
         "Happy Hour",
         "10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "happy"
@@ -437,7 +437,7 @@
         "Happy Hour",
         "8"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "happy"
@@ -467,7 +467,7 @@
         "Happy Hour",
         "9"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "happy",
@@ -498,7 +498,7 @@
         "Happy Hour",
         "9"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "happy"
@@ -558,7 +558,7 @@
         "Happy Hour",
         "11"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "happy"
@@ -583,7 +583,7 @@
         "Tuesday",
         "$25"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -608,7 +608,7 @@
         "Tuesday",
         "8 Wings"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "wings"
@@ -640,7 +640,7 @@
         "2pm-6pm",
         "2pm-5pm"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "tacos"
@@ -665,7 +665,7 @@
         "Specialty",
         "$10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "tacos"
@@ -697,7 +697,7 @@
         "2pm-6pm",
         "2pm-5pm"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "tacos"
@@ -722,7 +722,7 @@
         "Specialty",
         "$10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "tacos"
@@ -753,7 +753,7 @@
         "Apps $4",
         "7 DAYS A WEEK"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "16:00",
@@ -786,7 +786,7 @@
         "Apps $6",
         "7 DAYS A WEEK"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "16:00",
       "end": "18:00",
@@ -818,7 +818,7 @@
       "evidence": [
         "27.99"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -848,7 +848,7 @@
       "evidence": [
         "23.99"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family",
@@ -879,7 +879,7 @@
       "evidence": [
         "2.00 off each"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -909,7 +909,7 @@
       "evidence": [
         "$25 order"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -934,7 +934,7 @@
         "Monday Madness",
         "9.99"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -959,7 +959,7 @@
         "Senior Tuesday",
         "60+"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -984,7 +984,7 @@
         "Kids Eat",
         "WEDNESDAYS"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -1015,7 +1015,7 @@
         "Double Deal",
         "27.99"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -1045,7 +1045,7 @@
       "evidence": [
         "50 % Off Pasta"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -1075,7 +1075,7 @@
       "evidence": [
         "3OFF"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "categories": [
         "family"
@@ -1105,7 +1105,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1137,7 +1137,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1170,7 +1170,7 @@
         "Monday - Friday 3-6pm",
         "8"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1203,7 +1203,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1236,7 +1236,7 @@
         "Monday - Friday 3-6pm",
         "6"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1268,7 +1268,7 @@
         "Monday - Friday 3-6pm",
         "8"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1300,7 +1300,7 @@
         "Monday - Friday 3-6pm",
         "10"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1332,7 +1332,7 @@
         "Monday - Friday 3-6pm",
         "8"
       ],
-      "lastChecked": "2026-10-04",
+      "lastChecked": "2026-10-05",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
