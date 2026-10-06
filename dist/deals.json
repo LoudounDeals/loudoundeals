@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-10-05T10:31:44.263Z",
+  "updatedAt": "2026-10-06T10:30:28.993Z",
   "deals": [
     {
       "id": "andolinis-monday-pizza",
@@ -15,7 +15,7 @@
       "timeLabel": "Mondays",
       "terms": "Mention the coupon. Limit two pizzas. Cannot combine offers. One topping available for $10.99.",
       "sourceUrl": "https://andolinis-pizza.com/specials/",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147",
       "categories": [
@@ -87,7 +87,7 @@
       "timeLabel": "Tuesdays · Dine-in",
       "terms": "Buy two qualifying regular-menu entrées. One free kids’ meal per table, age 13 or under. Cannot combine discounts.",
       "sourceUrl": "https://saahilrestaurant.com/kids-eat-free-tuesdays",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "address": "22000 Dulles Retail Plaza, Suite 102, Sterling, VA 20166",
       "categories": [
@@ -158,7 +158,7 @@
       "timeLabel": "Saturdays · Online orders",
       "terms": "Use promo code SATURDAY. Cannot combine with other offers.",
       "sourceUrl": "https://andolinis-pizza.com/specials/",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "address": "21770 Beaumeade Circle, Ste 135, Ashburn, VA 20147",
       "categories": [
@@ -201,7 +201,7 @@
       ],
       "timeLabel": "Mondays",
       "terms": "Weekly special. Serving hours and refill restrictions are not published; confirm before ordering.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -222,7 +222,7 @@
       ],
       "timeLabel": "Tuesdays",
       "terms": "Three tacos are also available for $10. Serving hours are not published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "tacos"
@@ -243,7 +243,7 @@
       ],
       "timeLabel": "Wednesdays",
       "terms": "Weekly special. Serving hours and refill restrictions are not published; confirm before ordering.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "wings"
@@ -264,7 +264,7 @@
       ],
       "timeLabel": "Thursdays",
       "terms": "Weekly surf-and-turf special. Serving hours are not published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -290,7 +290,7 @@
       ],
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Two tacos per order. Happy-hour menu only; no Saturday offer listed.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "happy",
@@ -317,7 +317,7 @@
       ],
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Appetizer portion. Happy-hour menu only; no Saturday offer listed.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "happy"
@@ -343,7 +343,7 @@
       ],
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Cheese dip with tortilla chips. Happy-hour menu only; no Saturday offer listed.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "happy"
@@ -369,7 +369,7 @@
       ],
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Wing count is not specified. Happy-hour menu only; no Saturday offer listed.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "happy",
@@ -396,7 +396,7 @@
       ],
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Includes house-cut fries. Happy-hour menu only; no Saturday offer listed.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "happy"
@@ -448,7 +448,7 @@
       ],
       "timeLabel": "Mon–Tue 4–6 p.m. · Wed–Fri 3–6 p.m. · Sun 3–8 p.m.",
       "terms": "Served with slaw. Happy-hour menu only; no Saturday offer listed.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "happy"
@@ -469,7 +469,7 @@
       ],
       "timeLabel": "Tuesdays",
       "terms": "Includes one side. Specials say 10 a.m.–close, but location hours say 11 a.m. opening; confirm serving time.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -490,7 +490,7 @@
       ],
       "timeLabel": "Tuesdays",
       "terms": "Eight wings per order. Specials say 10 a.m.–close, but location hours say 11 a.m. opening; confirm serving time.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "wings"
@@ -517,7 +517,7 @@
       ],
       "timeLabel": "Mon–Thu 2–6 p.m. · Fri–Sun 2–5 p.m.",
       "terms": "Traditional tacos only. The same two-taco offer is also advertised for Taco Tuesday.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "tacos"
@@ -538,7 +538,7 @@
       ],
       "timeLabel": "Tuesdays",
       "terms": "Tuesday combination includes a soft drink. Specific serving hours are not published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "tacos"
@@ -565,7 +565,7 @@
       ],
       "timeLabel": "Mon–Thu 2–6 p.m. · Fri–Sun 2–5 p.m.",
       "terms": "Traditional tacos only. The same two-taco offer is also advertised for Taco Tuesday.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "tacos"
@@ -586,7 +586,7 @@
       ],
       "timeLabel": "Tuesdays",
       "terms": "Tuesday combination includes a soft drink. Specific serving hours are not published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "tacos"
@@ -613,7 +613,7 @@
       ],
       "timeLabel": "Every day · 3–4 p.m.",
       "terms": "Selected appetizers only; ask which dishes qualify. Homepage explicitly announces seven-day availability.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "16:00",
@@ -642,7 +642,7 @@
       ],
       "timeLabel": "Every day · 4–6 p.m.",
       "terms": "Selected appetizers only; ask which dishes qualify. Homepage explicitly announces seven-day availability.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "16:00",
       "end": "18:00",
@@ -671,7 +671,7 @@
       ],
       "timeLabel": "Daily website offer",
       "terms": "Two large pizzas, one topping each. No day restriction or expiration is published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -698,7 +698,7 @@
       ],
       "timeLabel": "Daily website offer",
       "terms": "One large pizza with one topping and ten wings. No day restriction or expiration is published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family",
@@ -726,7 +726,7 @@
       ],
       "timeLabel": "Daily website offer",
       "terms": "Buy two extra-large pizzas; save $2 on each. Final order price depends on your selection.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -753,7 +753,7 @@
       ],
       "timeLabel": "Daily website offer",
       "terms": "Requires a $25 order. Quantity of complimentary knots is not specified.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -774,7 +774,7 @@
       ],
       "timeLabel": "Mondays",
       "terms": "Dine-in or pickup; no delivery. One per customer, party and family. Mention coupon; cannot combine offers.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -795,7 +795,7 @@
       ],
       "timeLabel": "Tuesdays · Age 60+",
       "terms": "Age 60 or older; dine-in or pickup, no delivery. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -816,7 +816,7 @@
       ],
       "timeLabel": "Wednesdays · Dine-in",
       "terms": "Buy an adult entrée or pasta; one free kids-menu meal per family, order and transaction. No pickup or delivery. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -843,7 +843,7 @@
       ],
       "timeLabel": "Daily coupon offer",
       "terms": "Extra toppings cost regular price. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -870,7 +870,7 @@
       ],
       "timeLabel": "Daily coupon offer",
       "terms": "Buy an entrée or pasta; second must cost the same or less. Dine-in or pickup. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -897,7 +897,7 @@
       ],
       "timeLabel": "Daily · App only",
       "terms": "Apply code 3OFF in the app; limit one pizza. Mention coupon; one per person per visit; cannot combine offers. Limited-time offer, no expiration published.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "categories": [
         "family"
@@ -922,7 +922,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -949,7 +949,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -977,7 +977,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1005,7 +1005,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1033,7 +1033,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1060,7 +1060,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1087,7 +1087,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
@@ -1114,7 +1114,7 @@
       ],
       "timeLabel": "Mon–Fri · 3–6 p.m.",
       "terms": "Happy-hour portion and price from the dedicated happy-hour menu. Other menu pages show different prices; use this linked offer.",
-      "lastChecked": "2026-10-05",
+      "lastChecked": "2026-10-06",
       "status": "active",
       "start": "15:00",
       "end": "18:00",
