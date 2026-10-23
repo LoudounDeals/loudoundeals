@@ -8,11 +8,11 @@ import {validate, googleMapsUrl} from './model.mjs';
 
 const source = JSON.parse(await readFile('data/deals.json', 'utf8'));
 
-test('source links reject executable, insecure and malformed URLs', () => {
-  for (const sourceUrl of ['javascript:alert(1)', 'data:text/html,<script>alert(1)</script>', 'http://example.com', '//example.com', 'not a URL']) {
+test('source links reject executable, insecure, credential-bearing and malformed URLs', () => {
+  for (const sourceUrl of ['javascript:alert(1)', 'data:text/html,<script>alert(1)</script>', 'http://example.com', '//example.com', 'not a URL', 'https://trusted.example@evil.example/', 'https://user:password@example.com/', 'https://example.com:8443/', {toString: () => 'https://example.com'}]) {
     const data = structuredClone(source);
     data.deals[0].sourceUrl = sourceUrl;
-    assert.throws(() => validate(data), sourceUrl);
+    assert.throws(() => validate(data), String(sourceUrl));
   }
 });
 
@@ -41,6 +41,10 @@ test('production build escapes hostile text and attributes, protects embedded JS
     for (const key of ['restaurant', 'address', 'title', 'priceLabel', 'timeLabel', 'terms']) deal[key] = payload;
     deal.sourceUrl = 'https://example.com/?x=" onmouseover="alert(1)&y=<script>';
     deal.evidence = 'INTERNAL_EVIDENCE_SENTINEL';
+    deal.internalNotes = {secret: 'PRIVATE_FIELD_SENTINEL'};
+    await mkdir(join(root, 'dist', 'old'), {recursive: true});
+    await writeFile(join(root, 'dist', '.env'), 'STALE_SECRET_SENTINEL');
+    await writeFile(join(root, 'dist', 'old', 'report.json'), 'STALE_REPORT_SENTINEL');
     await writeFile(join(root, 'data', 'deals.json'), JSON.stringify(data));
     await writeFile(join(root, 'data', 'verification.json'), 'PRIVATE_RULES_SENTINEL');
     await writeFile(join(root, '.env'), 'SECRET_SENTINEL');
@@ -59,6 +63,8 @@ test('production build escapes hostile text and attributes, protects embedded JS
     const publicData = await readFile(join(root, 'dist', 'deals.json'), 'utf8');
     assert(!publicData.includes('INTERNAL_EVIDENCE_SENTINEL'));
     assert(!html.includes('INTERNAL_EVIDENCE_SENTINEL'));
+    assert(!publicData.includes('PRIVATE_FIELD_SENTINEL'));
+    assert(!html.includes('PRIVATE_FIELD_SENTINEL'));
     assert.deepEqual((await readdir(join(root, 'dist'))).sort(), ['app.mjs', 'brand.css', 'deals.json', 'fonts', 'fonts.css', 'images', 'index.html', 'model.mjs', 'style.css', 'templates.css', 'templates.js', 'themes.css']);
   } finally {
     await rm(root, {recursive: true, force: true});

@@ -1,8 +1,15 @@
-import {readFile,writeFile,mkdir,copyFile,cp} from 'node:fs/promises';
+import {readFile,writeFile,mkdir,copyFile,cp,rm,realpath} from 'node:fs/promises';
+import {resolve} from 'node:path';
 import {createHash} from 'node:crypto';
 import {validate,activeDeals,googleMapsUrl} from './model.mjs';
-const data=validate(JSON.parse(await readFile('data/deals.json','utf8')));await mkdir('dist',{recursive:true});
-const publicData={updatedAt:data.updatedAt,deals:activeDeals(data).map(({evidence,...d})=>d)};
+const data=validate(JSON.parse(await readFile('data/deals.json','utf8')));
+// Rebuild only the fixed output directory; never publish files from older builds.
+const output=resolve(await realpath('.'),'dist');
+await rm(output,{recursive:true,force:true});
+await mkdir(output);
+// New internal fields stay private unless explicitly included here.
+const publicFields=['id','restaurant','address','town','title','price','priceLabel','category','categories','days','start','end','timeLabel','terms','sourceUrl','lastChecked','status','validThrough'];
+const publicData={updatedAt:data.updatedAt,deals:activeDeals(data).map(d=>Object.fromEntries(Object.entries(d).filter(([key])=>publicFields.includes(key))))};
 await writeFile('dist/deals.json',JSON.stringify(publicData,null,2)+'\n');await copyFile('scripts/model.mjs','dist/model.mjs');
 const escape=s=>String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;');
 const list=publicData.deals.map(d=>`<article class="deal"><div class="deal-top"><span class="badge">${escape(d.timeLabel)}</span><span>${escape(d.town)}</span></div><div class="price">${escape(d.priceLabel)}</div><h3>${escape(d.title)}</h3><p class="restaurant">${escape(d.restaurant)}</p><div class="deal-location"><p class="address">${escape(d.address)}</p><a href="${escape(googleMapsUrl(d))}" target="_blank" rel="noopener noreferrer" aria-label="${escape(d.restaurant)} on Google Maps (opens in a new tab)">Google Maps ↗</a></div><p class="terms">${escape(d.terms)}</p><div class="deal-foot"><span>Website checked ${escape(d.lastChecked)}</span><a href="${escape(d.sourceUrl)}" target="_blank" rel="noopener noreferrer">View offer ↗</a></div></article>`).join('');
